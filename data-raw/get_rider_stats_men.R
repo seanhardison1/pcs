@@ -2,7 +2,7 @@ library(tidyverse)
 library(rvest)
 library(xml2)
 
-url <- "https://www.procyclingstats.com/rankings.php"
+url <- "https://www.procyclingstats.com/rankings.php?id=59786&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters="
 site <- read_html(url)
 
 current_rankings <- 
@@ -130,7 +130,7 @@ for (i in 1:length(rider_urls)){
    
 }
 
-rider_records <- tibble(rider_season_output)
-names(rider_records) <- str_to_lower(names(rider_records))
+rider_records_men <- tibble(rider_season_output)
+names(rider_records_men) <- str_to_lower(names(rider_records_men))
 
-usethis::use_data(rider_records, overwrite = TRUE)
+usethis::use_data(rider_records_men, overwrite = TRUE)
