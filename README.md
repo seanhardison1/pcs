@@ -15,3 +15,14 @@ devtools::install_github("seanhardison1/pcs")
 pcs::rider_records_women
 pcs::rider_records_men
 ```
+Rider results are returned as a `tibble` with the column `result` indicating finishing place. When a rider is listed as DNF, DNS, or DSQ etc, their 
+results are encoded numerically as follows:
+
+| Result flag | Code |
+|-------------|------|
+| DNF         | 999  |
+| DNS         | 998  |
+| OTL         | 997  |
+| DF          | 996  |
+| NQ          | 995  |
+| DSQ         | 994  |
