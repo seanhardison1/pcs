@@ -138,3 +138,5 @@ rider_records_men <- tibble(rider_season_output) %>%
 names(rider_records_men) <- str_to_lower(names(rider_records_men))
 
 usethis::use_data(rider_records_men, overwrite = TRUE)
+
+write_csv(rider_records_men,here::here("data/rider_records_men.csv"))
