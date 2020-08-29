@@ -41,7 +41,6 @@ team_urls <- url_list %>%
 rider_season_output <- NULL
 for (i in 1:length(rider_urls)){
   url <- paste0("https://www.procyclingstats.com/rider/",rider_urls[i])
-  # url <- paste0("https://www.procyclingstats.com/rider/remco-evenepoel")
   rider_html <- read_html(url) 
   
   rider_metadata <- 
@@ -68,6 +67,7 @@ for (i in 1:length(rider_urls)){
   }
   
   for (j in 1:length(seasons)){
+    
     message(paste(rider, seasons[j]))
     rider_season_url <- paste0(url, "/", seasons[j])
     rider_season_site <- read_html(rider_season_url)
@@ -111,15 +111,15 @@ for (i in 1:length(rider_urls)){
       
       output <- bind_rows(one_day_init, 
                           gt_init) %>% 
-        mutate(Date = ifelse(Date != "",paste0(.$Date,".",seasons[j]),NA),
-               Date = as.Date(Date, "%d.%m.%y"),
+        mutate(Date = ifelse(Date != "",paste0(Date,".",seasons[j]),NA),
+               Date = as.Date(Date, "%d.%m.%Y"),
                rider = rider,
                team = team) 
     } else {
       output <- 
         rider_season_table %>% 
-        mutate(Date = ifelse(Date != "",paste0(.$Date,".",seasons[j]),NA),
-               Date = as.Date(Date, "%d.%m.%y"),
+        mutate(Date = ifelse(Date != "",paste0(Date,".",seasons[j]),NA),
+               Date = as.Date(Date, "%d.%m.%Y"),
                stage = "One day",
                rider  = rider,
                team = team)
@@ -130,7 +130,10 @@ for (i in 1:length(rider_urls)){
   
 }
 
-rider_records_women <- tibble(rider_season_output)
+rider_records_women <- tibble(rider_season_output) %>% 
+  mutate(result = as.numeric(str_replace_all(result, c("DNF" = "999", "DNS" = "998",
+                                                       "OTL" = "997", "DF" = "996",
+                                                       "NQ" = "995", "DSQ" = "994"))))
 names(rider_records_women) <- str_to_lower(names(rider_records_women))
 
 usethis::use_data(rider_records_women, overwrite = TRUE)
