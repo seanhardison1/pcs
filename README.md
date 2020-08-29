@@ -12,5 +12,6 @@ devtools::install_github("seanhardison1/pcs")
 ### Usage
 
 ```
-pcs::rider_records
+pcs::rider_records_women
+pcs::rider_records_men
 ```
