@@ -1,6 +1,8 @@
-library(tidyverse)
+library(dplyr)
 library(rvest)
 library(xml2)
+library(stringr)
+library(tidyr)
 
 url <- "https://www.procyclingstats.com/rankings.php?id=59786&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters="
 site <- read_html(url)
@@ -25,7 +27,7 @@ current_rankings <-
 url_list <- raw_table %>% 
   html_nodes(., "a") %>% 
   html_attr(., "href") %>% 
-  as_tibble() %>% 
+  tibble::as_tibble() %>% 
   filter(str_detect(value, "rider/|team/")) %>% 
   separate(value, c("var","url"), "/")
 

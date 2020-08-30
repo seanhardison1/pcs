@@ -1,6 +1,8 @@
-library(tidyverse)
+library(dplyr)
 library(rvest)
 library(xml2)
+library(stringr)
+library(tidyr)
 
 url <- "https://www.procyclingstats.com/rankings/we"
 site <- read_html(url)

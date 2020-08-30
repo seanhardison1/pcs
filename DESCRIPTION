@@ -14,6 +14,13 @@ LazyData: true
 Depends: 
     R (>= 2.10)
 Imports:
-    tidyverse,
     rvest,
-    xml2
+    xml2,
+    magrittr,
+    dplyr,
+    stringr,
+    tibble,
+    tidyr,
+    usethis,
+    readr,
+    here
