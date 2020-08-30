@@ -1,0 +1,12 @@
+# Create sqlite DB for men and women corresponding to each CSV.
+sqlite3 ../data/rider_records_men.sqlite "create table records(date TEXT,result INT,gc_result_on_stage INT,race TEXT,distance TEXT,pointspcs INT,pointsuci INT,stage TEXT,rider TEXT,team TEXT)"
+sqlite3 ../data/rider_records_women.sqlite "create table records(date TEXT,result INT,gc_result_on_stage INT,race TEXT,distance TEXT,pointspcs INT,pointsuci INT,stage TEXT,rider TEXT,team TEXT)"
+
+# Filling DBs with CSV content
+sqlite3 -separator ',' -csv ../data/rider_records_men.sqlite ".import ../data/rider_records_men.csv records"
+sqlite3 -separator ',' -csv ../data/rider_records_women.sqlite ".import ../data/rider_records_women.csv records"
+
+# Remove header lines that were copied to the tables
+# TODO find better alternative
+sqlite3 ../data/rider_records_men.sqlite "delete from records where gc_result_on_stage = 'gc_result_on_stage' and race = 'race';"
+sqlite3 ../data/rider_records_women.sqlite "delete from records where gc_result_on_stage = 'gc_result_on_stage' and race = 'race';"
