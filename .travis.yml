@@ -1,0 +1,15 @@
+language: r
+warnings_are_errors: false
+
+script:
+  - Rscript -e "source('data-raw/get_rider_stats_men.R')"
+  - Rscript -e "source('data-raw/get_rider_stats_women.R')"
+
+deploy:
+  provider: pages
+skip_cleanup: true
+github_token: $GITHUB_TOKEN 
+keep_history: true
+target_branch: master        # Add this line - To push into GitHub master branch
+on:
+  branch: staging
