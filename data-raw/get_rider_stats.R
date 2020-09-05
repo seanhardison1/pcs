@@ -144,8 +144,10 @@ get_rider_stats <- function(url){
   return(rider_records)
 }
 
-rider_records_women <- get_rider_stats(url = "https://www.procyclingstats.com/rankings/we")
-rider_records_men <- get_rider_stats(url = "https://www.procyclingstats.com/rankings/")
+rider_records_women <- get_rider_stats(url = "https://www.procyclingstats.com/rankings.php?id=60118&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=") %>% 
+  mutate(lasteUpdate = Sys.Date())
+rider_records_men <- get_rider_stats(url = "https://www.procyclingstats.com/rankings.php?id=60095&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=") %>% 
+  mutate(lasteUpdate = Sys.Date())
 
 usethis::use_data(rider_records_women, 
                   rider_records_men,
