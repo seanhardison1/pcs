@@ -144,14 +144,23 @@ get_rider_stats <- function(url){
   return(rider_records)
 }
 
-rider_records_women <- get_rider_stats(url = "https://www.procyclingstats.com/rankings.php?id=60118&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=") %>% 
-  mutate(lasteUpdate = Sys.Date())
-rider_records_men <- get_rider_stats(url = "https://www.procyclingstats.com/rankings.php?id=60095&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=") %>% 
-  mutate(lasteUpdate = Sys.Date())
+rider_records_women2 <- get_rider_stats(url = "https://www.procyclingstats.com/rankings.php?id=60514&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=")
 
-usethis::use_data(rider_records_women, 
+rider_records_women <-
+  rider_records_women2 %>%
+  full_join(.,pcs::rider_records_women) %>%
+  distinct()
+
+rider_records_men2 <- get_rider_stats(url = "https://www.procyclingstats.com/rankings.php?id=59874&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=") 
+
+rider_records_men <- 
+  rider_records_men2 %>% 
+  full_join(.,pcs::rider_records_men) %>% 
+  distinct()
+
+usethis::use_data(rider_records_women,
                   rider_records_men,
                   overwrite = TRUE)
-
-write_csv(rider_records_women,here::here("data/rider_records_women.csv"))
-write_csv(rider_records_men,here::here("data/rider_records_men.csv"))
+# 
+# write_csv(rider_records_women,here::here("data/rider_records_women.csv"))
+# write_csv(rider_records_men,here::here("data/rider_records_men.csv"))

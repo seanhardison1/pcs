@@ -127,8 +127,19 @@ get_profs <- function(url){
   return(rider_profiles)
 }
 
-rider_profiles_men <- get_profs(url = "https://www.procyclingstats.com/rankings.php?id=59874&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=")
-rider_profiles_women <- get_profs(url = "https://www.procyclingstats.com/rankings.php?id=59898&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=")
+rider_profiles_men2 <- get_profs(url = "https://www.procyclingstats.com/rankings.php?id=59874&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=")
+
+rider_profiles_men <- 
+  pcs::rider_profiles_men %>% 
+  full_join(.,rider_profiles_men2) %>% 
+  distinct()
+
+rider_profiles_women2 <- get_profs(url = "https://www.procyclingstats.com/rankings.php?id=60514&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=")
+
+rider_profiles_women <- 
+  pcs::rider_profiles_women %>% 
+  full_join(.,rider_profiles_women2) %>% 
+  distinct()
 
 usethis::use_data(rider_profiles_men,
                   rider_profiles_women,
