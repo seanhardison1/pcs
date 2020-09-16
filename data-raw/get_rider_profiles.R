@@ -87,7 +87,8 @@ get_profs <- function(url){
     
     if (str_detect(jumbled, "Place of birth:")){
       pob <- jumbled %>% 
-        str_extract("(?<=Place of birth: ).*(?=Points)|(?=One)")
+        str_extract("(?<=Place of birth: ).*(?=Points)|(?=One)") %>%
+        str_squish()
     } else {
       pob <- NA
     }
