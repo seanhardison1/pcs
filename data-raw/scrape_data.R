@@ -1,7 +1,7 @@
 library(dplyr)
 library(stringr)
-library(rvest)
 library(xml2)
+library(rvest)
 library(tidyr)
 library(readr)
 
