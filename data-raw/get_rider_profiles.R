@@ -4,6 +4,23 @@ library(rvest)
 library(xml2)
 library(tidyr)
 
+
+get_ranking_id <- function(url)
+{
+  site <- read_html(url)
+
+  rankings_id <-
+    site %>%
+    html_nodes(xpath = "//div[@class='content ']") %>%
+    html_nodes(xpath = "//div[@class='statDivLeft']") %>%
+    html_nodes(xpath = "//form[@action='rankings.php']") %>%
+    html_nodes(xpath = "//select[@name='id']/option[@selected]") %>%
+    xml_attr("value")
+
+  return(rankings_id)
+}
+
+
 get_profs <- function(url){
   site <- read_html(url)
   current_rankings <- 
@@ -128,14 +145,18 @@ get_profs <- function(url){
   return(rider_profiles)
 }
 
-rider_profiles_men2 <- get_profs(url = "https://www.procyclingstats.com/rankings.php?id=59874&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=")
+men_ranking_id <- get_ranking_id("https://www.procyclingstats.com/rankings.php/me?cat=me")
+url_men_rankings <- sprintf("https://www.procyclingstats.com/rankings.php?id=%s&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=", men_ranking_id)
+rider_profiles_men2 <- get_profs(url = url_men_rankings)
 
 rider_profiles_men <- 
   pcs::rider_profiles_men %>% 
   full_join(.,rider_profiles_men2) %>% 
   distinct()
 
-rider_profiles_women2 <- get_profs(url = "https://www.procyclingstats.com/rankings.php?id=60514&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=")
+women_ranking_id <- get_ranking_id("https://www.procyclingstats.com/rankings.php/we?cat=we")
+url_women_rankings <- sprintf("https://www.procyclingstats.com/rankings.php?id=%s&nation=&team=&page=0&prev_id=prev&younger=&older=&limit=200&filter=Filter&morefilters=", women_ranking_id)
+rider_profiles_women2 <- get_profs(url = url_women_rankings)
 
 rider_profiles_women <- 
   pcs::rider_profiles_women %>% 
