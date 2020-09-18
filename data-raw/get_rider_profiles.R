@@ -4,10 +4,11 @@ library(rvest)
 library(xml2)
 library(tidyr)
 
+source("data-raw/functions.R")
 
 get_ranking_id <- function(url)
 {
-  site <- read_html(url)
+  site <- read_html_safe(url, 3)
 
   rankings_id <-
     site %>%
@@ -22,7 +23,7 @@ get_ranking_id <- function(url)
 
 
 get_profs <- function(url){
-  site <- read_html(url)
+  site <- read_html_safe(url, 3)
   current_rankings <- 
     site %>% 
     html_nodes(xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "statDivLeft", " " ))]') %>% 
@@ -55,7 +56,7 @@ get_profs <- function(url){
   for (i in 1:length(rider_urls)){
     Sys.sleep(0.5)
     url <- paste0("https://www.procyclingstats.com/rider/",rider_urls[i])
-    rider_html <- read_html(url) 
+    rider_html <- read_html_safe(url, 3)
     
     rider_metadata <- 
       rider_html %>% 
