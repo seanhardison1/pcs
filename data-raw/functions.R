@@ -19,5 +19,5 @@ read_html_safe <- function(url, tries)
     tries <- tries - 1
   }
 
- return(res_html)
+  return(res_html)
 }
