@@ -22,6 +22,7 @@
 #'   \item{sprint}{Points per "sprint" specialty}
 #'   \item{climber}{Points per "climber" specialty}
 #' }
+#' @source \url{http://www.procyclingstats.com}
 "rider_profiles_men"
 
 
@@ -43,6 +44,7 @@
 #'   \item{rider}{Rider name}
 #'   \item{team}{Current team}
 #' }
+#' @source \url{http://www.procyclingstats.com}
 "rider_records_men"
 
 
@@ -65,6 +67,7 @@
 #'   \item{sprint}{Points per "sprint" specialty}
 #'   \item{climber}{Points per "climber" specialty}
 #' }
+#' @source \url{http://www.procyclingstats.com}
 "rider_profiles_women"
 
 
@@ -86,4 +89,5 @@
 #'   \item{rider}{Rider name}
 #'   \item{team}{Current team}
 #' }
+#' @source \url{http://www.procyclingstats.com}
 "rider_records_women"

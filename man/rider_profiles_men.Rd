@@ -21,6 +21,9 @@ Column description:
   \item{climber}{Points per "climber" specialty}
 }
 }
+\source{
+\url{http://www.procyclingstats.com}
+}
 \usage{
 rider_profiles_men
 }
