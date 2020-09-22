@@ -11,9 +11,13 @@ source("data-raw/get_pcs_data.R")
 # Get URL of latest rankings
 rankings_url <- get_ranking_url("https://www.procyclingstats.com/rankings.php/me?cat=me")
 # Get URL of rider profiles
-rider_urls <- get_rider_urls(rankings_url)
+###rider_urls <- get_rider_urls(rankings_url)
+rider_urls <- get_rider_urls_sl('https://www.procyclingstats.com/race/tour-de-france/2020/gc/startlist')
 # Get profiles and results for each rider
 pcs_data <- get_pcs_data(rider_urls)
+
+rider_profiles_men <- pcs_data$profiles
+rider_records_men <- pcs_data$results
 
 # Use distinct profiles only
 rider_profiles_men <-

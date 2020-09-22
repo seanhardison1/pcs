@@ -6,6 +6,29 @@ library(tidyr)
 library(readr)
 
 
+read_html_safe <- function(url, tries = 3)
+{
+  res_html <- NULL
+  while (tries > 0 & is.null(res_html))
+  {
+    tryCatch(
+      {
+        res_html <- read_html_safe(url)
+        break()
+      }
+      ,
+      error = function(e)
+      {
+        message(paste(e, url))
+      }
+    )
+    tries <- tries - 1
+  }
+
+  return(res_html)
+}
+
+
 # Get URL of latest PCS ranking for given category
 # Parameter `url`:
 #  e.g. "https://www.procyclingstats.com/rankings.php/me?cat=me" (men elite)
@@ -13,7 +36,7 @@ library(readr)
 # Returns: PCS ranking URL
 get_ranking_url <- function(url)
 {
-  site <- read_html(url)
+  site <- read_html_safe(url)
 
   rankings_id <-
     site %>%
@@ -33,7 +56,7 @@ get_ranking_url <- function(url)
 # Returns: vector of PCS URLs for each rider
 get_rider_urls <- function(url)
 {
-  site <- read_html(url)
+  site <- read_html_safe(url)
   current_rankings <-
     site %>%
     html_nodes(xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "statDivLeft", " " ))]') %>%
@@ -61,6 +84,23 @@ get_rider_urls <- function(url)
   rider_urls <- url_list %>%
     filter(var == "rider") %>%
     dplyr::pull(url)
+
+  return(rider_urls)
+}
+
+
+# Get URLs of riders profiles from *startlist* page
+# Parameter `url`: Startlist URL (e.g. 'https://www.procyclingstats.com/race/tour-de-france/2020/gc/startlist')
+# Returns: vector of PCS URLs for each rider
+get_rider_urls_sl <- function(url)
+{
+  site <- read_html_safe(url)
+
+  rider_urls <- site %>%
+    html_nodes(xpath = "//ul[@class='startlist']") %>%
+    html_nodes(xpath = "//a[@class='rider blue ']") %>%
+    xml_attr("href") %>%
+    str_remove("^rider/")
 
   return(rider_urls)
 }
@@ -194,7 +234,7 @@ parse_rider_results <- function(rider_url, rider_html)
     Sys.sleep(2)
     message(paste(rider, seasons[j]))
     rider_season_url <- paste0(rider_url, "/", seasons[j])
-    rider_season_site <- read_html(rider_season_url)
+    rider_season_site <- read_html_safe(rider_season_url)
     rider_season_table <- rider_season_site %>%
       html_nodes("table") %>%
       .[[1]] %>%
@@ -269,7 +309,7 @@ get_pcs_data <- function(rider_urls)
   {
     Sys.sleep(5)
     rider_url <- paste0("https://www.procyclingstats.com/rider/",rider_urls[i])
-    rider_html <- read_html(rider_url)
+    rider_html <- read_html_safe(rider_url)
     
     profile_out <- parse_rider_profile(rider_html)
     message(profile_out["rider"])
