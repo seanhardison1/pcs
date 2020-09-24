@@ -13,7 +13,7 @@ read_html_safe <- function(url, tries = 3)
   {
     tryCatch(
       {
-        res_html <- read_html_safe(url)
+        res_html <- read_html(url)
         break()
       }
       ,
