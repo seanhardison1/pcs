@@ -9,18 +9,18 @@
 #' 
 #' @format Column description:
 #' \describe{
-#'   \item{rider}{Rider name}
-#'   \item{dob}{Date of birth}
-#'   \item{nationality}{Rider nationality}
-#'   \item{pob}{Place of birth}
-#'   \item{current_team}{Current team}
-#'   \item{weight}{Rider weight in kilograms}
-#'   \item{height}{Rider height in meters}
-#'   \item{one_day_races}{Points per "one day races" specialty}
-#'   \item{gc}{Points per "general classification" specialty}
-#'   \item{tt}{Points per "time trial" specialty}
-#'   \item{sprint}{Points per "sprint" specialty}
-#'   \item{climber}{Points per "climber" specialty}
+#'   \item{\code{rider}}{Rider name}
+#'   \item{\code{dob}}{Date of birth}
+#'   \item{\code{nationality}}{Rider nationality}
+#'   \item{\code{pob}}{Place of birth}
+#'   \item{\code{current_team}}{Current team}
+#'   \item{\code{weight}}{Rider weight in kilograms}
+#'   \item{\code{height}}{Rider height in meters}
+#'   \item{\code{one_day_races}}{Points per "one day races" specialty}
+#'   \item{\code{gc}}{Points per "general classification" specialty}
+#'   \item{\code{tt}}{Points per "time trial" specialty}
+#'   \item{\code{sprint}}{Points per "sprint" specialty}
+#'   \item{\code{climber}}{Points per "climber" specialty}
 #' }
 #' @source \url{http://www.procyclingstats.com}
 "rider_profiles_men"
@@ -65,18 +65,18 @@
 #' 
 #' @format Column description:
 #' \describe{
-#'   \item{rider}{Rider name}
-#'   \item{dob}{Date of birth}
-#'   \item{nationality}{Rider nationality}
-#'   \item{pob}{Place of birth}
-#'   \item{current_team}{Current team}
-#'   \item{weight}{Rider weight in kilograms}
-#'   \item{height}{Rider height in meters}
-#'   \item{one_day_races}{Points per "one day races" specialty}
-#'   \item{gc}{Points per "general classification" specialty}
-#'   \item{tt}{Points per "time trial" specialty}
-#'   \item{sprint}{Points per "sprint" specialty}
-#'   \item{climber}{Points per "climber" specialty}
+#'   \item{\code{rider}}{Rider name}
+#'   \item{\code{dob}}{Date of birth}
+#'   \item{\code{nationality}}{Rider nationality}
+#'   \item{\code{pob}}{Place of birth}
+#'   \item{\code{current_team}}{Current team}
+#'   \item{\code{weight}}{Rider weight in kilograms}
+#'   \item{\code{height}}{Rider height in meters}
+#'   \item{\code{one_day_races}}{Points per "one day races" specialty}
+#'   \item{\code{gc}}{Points per "general classification" specialty}
+#'   \item{\code{tt}}{Points per "time trial" specialty}
+#'   \item{\code{sprint}}{Points per "sprint" specialty}
+#'   \item{\code{climber}}{Points per "climber" specialty}
 #' }
 #' @source \url{http://www.procyclingstats.com}
 "rider_profiles_women"
