@@ -5,7 +5,7 @@ library(rvest)
 library(tidyr)
 library(readr)
 
-source("data-raw/get_pcs_data.R")
+source("R/data-raw/get_pcs_data.R")
 
 
 # Get URL of latest rankings
