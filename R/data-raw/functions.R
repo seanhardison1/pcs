@@ -231,7 +231,7 @@ parse_rider_results <- function(rider_url, rider_html)
 
   for (j in 1:length(seasons))
   {
-    Sys.sleep(2)
+    Sys.sleep(1)
     message(paste(rider, seasons[j]))
     rider_season_url <- paste0(rider_url, "/", seasons[j])
     rider_season_site <- read_html_safe(rider_season_url)
@@ -307,7 +307,7 @@ get_pcs_data <- function(rider_urls)
   rider_results <- NULL
   for (i in 1:length(rider_urls))
   {
-    Sys.sleep(5)
+    Sys.sleep(1)
     rider_url <- paste0("https://www.procyclingstats.com/rider/",rider_urls[i])
     rider_html <- read_html_safe(rider_url)
     
@@ -321,6 +321,3 @@ get_pcs_data <- function(rider_urls)
   return(list("profiles" = rider_profiles,
               "results" = rider_results))
 }
-
-
-# message("Sourced functions from 'get_pcs_data.R'")
