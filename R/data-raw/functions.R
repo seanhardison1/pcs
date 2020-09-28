@@ -6,22 +6,30 @@ library(tidyr)
 library(readr)
 
 
+#' Get HTML document represented by URL
+#'
+#' \code{read_html_safe} downloads HTML document from URL address. Function
+#' \code{xml2::read_html} is called. When HTTP error occurs, optional \code{tries}
+#' parameter is decreased and new attempt is performed until \code{tries} counter
+#' reaches zero.
+#'
+#' @param url URL of web page to be downloaded
+#' @param tries Retry counter (optional, default = 3)
+#' @return HTML document, NULL on error
 read_html_safe <- function(url, tries = 3)
 {
   res_html <- NULL
   while (tries > 0 & is.null(res_html))
   {
     tryCatch(
-      {
-        res_html <- read_html(url)
-        break()
-      }
-      ,
-      error = function(e)
-      {
-        message(paste(e, url))
-      }
-    )
+    {
+      res_html <- read_html(url)
+      break()
+    },
+    error = function(e)
+    {
+      message(paste(e, url))
+    })
     tries <- tries - 1
   }
 
@@ -29,11 +37,15 @@ read_html_safe <- function(url, tries = 3)
 }
 
 
-# Get URL of latest PCS ranking for given category
-# Parameter `url`:
-#  e.g. "https://www.procyclingstats.com/rankings.php/me?cat=me" (men elite)
-#  e.g. "https://www.procyclingstats.com/rankings.php/we?cat=we" (women elite)
-# Returns: PCS ranking URL
+#' Get URL of latest PCS ranking
+#'
+#' \code{get_ranking_url} parses "rankings" page and returns URL to
+#' latest rankings set.
+#' 
+#' @param url PCS rankings URL, e.g.:
+#'   "https://www.procyclingstats.com/rankings.php/me?cat=me" (men elite)
+#'   "https://www.procyclingstats.com/rankings.php/we?cat=we" (women elite)
+#' @return URL to latest rankings set
 get_ranking_url <- function(url)
 {
   site <- read_html_safe(url)
@@ -51,9 +63,13 @@ get_ranking_url <- function(url)
 }
 
 
-# Get URLs of riders profiles from *ranking* page
-# Parameter `url`: Ranking URL (obtained from `get_ranking_url`)
-# Returns: vector of PCS URLs for each rider
+#' Get riders profile IDs from *ranking* page
+#' 
+#' \code{get_rider_urls} parses ranking page and returns
+#' vector of rider profiles IDs.
+#' 
+#' @param url Ranking URL (obtained from \code{get_ranking_url})
+#' @return Vector of rider profiles IDs for each rider
 get_rider_urls <- function(url)
 {
   site <- read_html_safe(url)
@@ -89,9 +105,14 @@ get_rider_urls <- function(url)
 }
 
 
-# Get URLs of riders profiles from *startlist* page
-# Parameter `url`: Startlist URL (e.g. 'https://www.procyclingstats.com/race/tour-de-france/2020/gc/startlist')
-# Returns: vector of PCS URLs for each rider
+#' Get riders profile IDs from *startlist* page
+#' 
+#' \code{get_rider_urls_sl} parses startlist page and returns
+#' vector of rider profiles IDs.
+#' 
+#' @param url Startlist URL, e.g.:
+#'   "https://www.procyclingstats.com/race/tour-de-france/2020/gc/startlist"
+#' @return Vector of rider profiles IDs for each rider
 get_rider_urls_sl <- function(url)
 {
   site <- read_html_safe(url)
@@ -106,10 +127,13 @@ get_rider_urls_sl <- function(url)
 }
 
 
-# Parse HTML code of rider's profile page for overall info
-# Parameter `rider_html`: result of `read_html` function
-#                         called with `rider_url` parameter
-# Returns: profile information for given rider
+#' Parse rider profile information from HTML code
+#'
+#' \code{parse_rider_profile} parses HTML code of rider's profile page
+#' for personal information.
+#'
+#' @param rider_html HTML code of rider's profile page
+#' @return Rider profile information (see \code{rider_profiles_men} documentation)
 parse_rider_profile <- function(rider_html)
 {
   rider_metadata<-
@@ -196,13 +220,15 @@ parse_rider_profile <- function(rider_html)
 }
 
 
-# Parse HTML code of rider's profile page for results
-# Parameter:
-#           `rider_url`: full URL of rider profile
-#           `rider_html`: result of `read_html` function
-#                         called with `rider_url` parameter
-# Returns: list of results for given rider
-parse_rider_results <- function(rider_url, rider_html)
+#' Parse rider results from HTML code
+#'
+#' \code{parse_rider_results} parses HTML code of rider's profile page
+#' for race results.
+#'
+#' @param rider_id Rider's profile ID
+#' @param rider_html HTML code of rider's profile page
+#' @return Rider results (see \code{rider_records_men} documentation)
+parse_rider_results <- function(rider_id, rider_html)
 {
   rider_season_output <- NULL
 
@@ -231,9 +257,9 @@ parse_rider_results <- function(rider_url, rider_html)
 
   for (j in 1:length(seasons))
   {
-    Sys.sleep(2)
+    Sys.sleep(1)
     message(paste(rider, seasons[j]))
-    rider_season_url <- paste0(rider_url, "/", seasons[j])
+    rider_season_url <- paste0(rider_id, "/", seasons[j])
     rider_season_site <- read_html_safe(rider_season_url)
     rider_season_table <- rider_season_site %>%
       html_nodes("table") %>%
@@ -301,13 +327,22 @@ parse_rider_results <- function(rider_url, rider_html)
 }
 
 
+#' Main PCS scraping function
+#' 
+#' \code{get_pcs_data} scrapes PCS data (rider profiles and results)
+#' for given vector of rider IDs.
+#' 
+#' @param rider_urls Vector of rider's profile IDs
+#' @return List of two data frames (\code{profiles} and \code{results}).
+#'   See \code{rider_profiles_men} and \code{rider_records_men} documentation
+#'   for details.
 get_pcs_data <- function(rider_urls)
 {
   rider_profiles <- NULL
   rider_results <- NULL
   for (i in 1:length(rider_urls))
   {
-    Sys.sleep(5)
+    Sys.sleep(1)
     rider_url <- paste0("https://www.procyclingstats.com/rider/",rider_urls[i])
     rider_html <- read_html_safe(rider_url)
     
@@ -321,6 +356,3 @@ get_pcs_data <- function(rider_urls)
   return(list("profiles" = rider_profiles,
               "results" = rider_results))
 }
-
-
-# message("Sourced functions from 'get_pcs_data.R'")
