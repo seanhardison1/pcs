@@ -19,7 +19,7 @@ library(readr)
 read_html_safe <- function(url, tries = 3)
 {
   res_html <- NULL
-  while (tries > 0 & is.null(res_html))
+  while (tries > 0 && is.null(res_html))
   {
     tryCatch(
     {
@@ -259,7 +259,7 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
   for (j in 1:length(seasonResults))
   {
     year <- seasonResults[j]
-    if (! is.null(seasons) & ! year %in% seasons)
+    if (!(is.null(seasons)) && !(year %in% seasons))
     {
       next
     }
