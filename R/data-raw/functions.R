@@ -327,6 +327,26 @@ parse_rider_results <- function(rider_id, rider_html)
 }
 
 
+#' Validation function: lists duplicate results per rider/date/race
+#'
+#' \code{findDuplicateResults} returns duplicate results from records data frame.
+#' Only *one* result per *one* rider per *one* day per *one* race+stage are
+#' allowed.
+#' 
+#' @param data Results data frame.
+#' @return Duplicate \code{results}).
+findDuplicateResults <- function(data)
+{
+  return(data %>%
+           subset(!is.na(date)) %>%
+           group_by(rider, date, race, stage) %>%
+           summarise(nres = n()) %>%
+           subset(nres > 1) %>%
+           arrange(date, race)
+  )
+}
+
+
 #' Main PCS scraping function
 #' 
 #' \code{get_pcs_data} scrapes PCS data (rider profiles and results)
