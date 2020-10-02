@@ -2,14 +2,9 @@ library(dplyr)
 library(readr)
 library(usethis)
 
-# Allow just *one* result for *one* rider in *one* day and *one* race+stage
+source("R/data-raw/functions.R")
 
-duplicates <- pcs::rider_records_men %>%
-  subset(!is.na(date)) %>%
-  group_by(rider, date, race, stage) %>%
-  summarise(nres = n()) %>%
-  subset(nres > 1) %>%
-  arrange(date, race)
+duplicates <- pcs::rider_records_men %>% findDuplicateResults()
 
 # ******************************************************************************
 
@@ -17,6 +12,8 @@ out <- pcs::rider_records_men
 
 
 # Step 1:
+#   This is glitch in PCS data!
+#   TODO: Add this to "post-processing" code?
 before <- nrow(out)
 
 out <- out[!(out$race == 'Tour Des Pays De Savoie (2.2U23)' &
@@ -46,6 +43,17 @@ after <- nrow(out)
 stopifnot(before - after == 7)
 
 # Step 3:
+before <- nrow(out)
+
+out <- out[!(out$date == '2010-08-10' &
+               out$race == 'Oslo Grand Prix (Nat.)' &
+               out$rider == 'Richie Porte' &
+               is.na(out$distance)),]
+
+after <- nrow(out)
+stopifnot(before - after == 1)
+
+# Step 4:
 #   This is glitch in PCS data!
 #   TODO: Add this to "post-processing" code?
 before <- nrow(out)
@@ -58,7 +66,7 @@ out <- out[!(out$date == '2012-06-15' &
 after <- nrow(out)
 stopifnot(before - after == 1)
 
-# Step 4:
+# Step 5:
 before <- nrow(out)
 
 brx <- out %>%
@@ -74,7 +82,7 @@ out <- anti_join(out,
 after <- nrow(out)
 stopifnot(before - after == 8)
 
-# Step 5:
+# Step 6:
 before <- nrow(out)
 
 tdf <- subset(out,
@@ -92,7 +100,10 @@ after <- nrow(out)
 stopifnot(before - after == 56)
 
 
-# Finally: Export data
+# Finally: Check & Export data
+duplicates <- findDuplicateResults(out)
+stopifnot(nrow(duplicates) == 0)
+
 rider_records_men <- out
 
 usethis::use_data(rider_records_men,
