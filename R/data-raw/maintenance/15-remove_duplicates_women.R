@@ -3,7 +3,7 @@ library(readr)
 library(usethis)
 
 source("R/data-raw/functions.R")
-source("R/data-raw/maintenance/functions.R")
+source("R/data-raw/maintenance/pcs_fixing.R")
 
 duplicates <- pcs::rider_records_women %>% find_duplicate_results()
 
