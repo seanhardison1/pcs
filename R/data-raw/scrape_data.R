@@ -27,6 +27,12 @@ rider_records_men <-
   full_join(., pcs_data$results) %>%
   distinct()
 
+# Check for duplicates
+duplicates_men <- find_duplicate_results(rider_records_men) %>% nrow()
+stopifnot(duplicates_men == 0)
+
+### ----------------------------------------------------------------------------
+
 #
 # Same for women elite
 #
@@ -43,6 +49,12 @@ rider_records_women <-
   pcs::rider_records_women %>%
   full_join(., pcs_data$results) %>%
   distinct()
+
+# Check for duplicates
+duplicates_women <- find_duplicate_results(rider_records_women) %>% nrow()
+stopifnot(duplicates_women == 0)
+
+### ----------------------------------------------------------------------------
 
 # Export
 usethis::use_data(rider_profiles_men,
