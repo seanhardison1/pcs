@@ -329,13 +329,13 @@ parse_rider_results <- function(rider_id, rider_html)
 
 #' Validation function: lists duplicate results per rider/date/race
 #'
-#' \code{findDuplicateResults} returns duplicate results from records data frame.
+#' \code{find_duplicate_results} returns duplicate results from records data frame.
 #' Only *one* result per *one* rider per *one* day per *one* race+stage are
 #' allowed.
 #' 
 #' @param data Results data frame.
 #' @return Duplicate \code{results}).
-findDuplicateResults <- function(data)
+find_duplicate_results <- function(data)
 {
   return(data %>%
            subset(!is.na(date)) %>%

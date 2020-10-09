@@ -3,46 +3,16 @@ library(readr)
 library(usethis)
 
 source("R/data-raw/functions.R")
+source("R/data-raw/maintenance/functions.R")
 
-duplicates <- pcs::rider_records_men %>% findDuplicateResults()
+duplicates <- pcs::rider_records_men %>% find_duplicate_results()
 
 # ******************************************************************************
 
-out <- pcs::rider_records_men
-
+# Step 0: Fix PCS errors
+out <- fix_pcs_results_men(pcs::rider_records_men)
 
 # Step 1:
-#   This is glitch in PCS data!
-#   TODO: Add this to "post-processing" code?
-before <- nrow(out)
-
-out <- out[!(out$race == 'Tour Des Pays De Savoie (2.2U23)' &
-               out$rider == 'Dan Martin' &
-               is.na(out$pointspcs)),]
-
-after <- nrow(out)
-stopifnot(before - after == 2)
-
-# Step 2:
-#   This is glitch in PCS data!
-#   TODO: Add this to "post-processing" code?
-before <- nrow(out)
-
-out <- out[!(out$date == '2009-07-07' &
-             out$race == 'Tour de France (2.HC)' &
-             out$stage == 'Stage 4 (TTT) - Montpellier › Montpellier' &
-             ((out$rider == "Greg Van Avermaet" & out$result != 13) |
-              (out$rider == "Niki Terpstra" & out$result != 15) |
-              (out$rider == "Pierre Rolland" & out$result != 19) |
-              (out$rider == "Rigoberto Urán" & out$result != 7) |
-              (out$rider == "Rui Costa" & out$result != 7) |
-              (out$rider == "Simon Geschke" & out$result != 20) |
-              (out$rider == "Vincenzo Nibali" & out$result != 4))),]
-
-after <- nrow(out)
-stopifnot(before - after == 7)
-
-# Step 3:
 before <- nrow(out)
 
 out <- out[!(out$date == '2010-08-10' &
@@ -53,20 +23,8 @@ out <- out[!(out$date == '2010-08-10' &
 after <- nrow(out)
 stopifnot(before - after == 1)
 
-# Step 4:
-#   This is glitch in PCS data!
-#   TODO: Add this to "post-processing" code?
-before <- nrow(out)
 
-out <- out[!(out$date == '2012-06-15' &
-               out$race == 'Oberösterreichrundfahrt (2.2)' &
-               out$rider == 'Felix Großschartner' &
-               out$result != 995),]
-
-after <- nrow(out)
-stopifnot(before - after == 1)
-
-# Step 5:
+# Step 2:
 before <- nrow(out)
 
 brx <- out %>%
@@ -82,7 +40,7 @@ out <- anti_join(out,
 after <- nrow(out)
 stopifnot(before - after == 8)
 
-# Step 6:
+# Step 3:
 before <- nrow(out)
 
 tdf <- subset(out,
@@ -101,7 +59,7 @@ stopifnot(before - after == 56)
 
 
 # Finally: Check & Export data
-duplicates <- findDuplicateResults(out)
+duplicates <- find_duplicate_results(out)
 stopifnot(nrow(duplicates) == 0)
 
 rider_records_men <- out

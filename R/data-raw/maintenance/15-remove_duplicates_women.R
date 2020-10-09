@@ -3,47 +3,18 @@ library(readr)
 library(usethis)
 
 source("R/data-raw/functions.R")
+source("R/data-raw/maintenance/functions.R")
 
-duplicates <- pcs::rider_records_women %>% findDuplicateResults()
+duplicates <- pcs::rider_records_women %>% find_duplicate_results()
 
 # ******************************************************************************
 
-out <- pcs::rider_records_women
-
-
-# Step 1:
-#   This is glitch in PCS data!
-#   TODO: Add this to "post-processing" code?
-before <- nrow(out)
-
-out <- out[!(out$date == '2008-09-03' &
-               out$race == 'Holland Ladies Tour (2.2)' &
-               out$rider == 'Marianne Vos' &
-               out$result != 6),]
-
-after <- nrow(out)
-stopifnot(before - after == 1)
-
-
-# Step 2:
-#   This is glitch in PCS data!
-#   TODO: Add this to "post-processing" code?
-#   Sorry, Kathrin... PCS messed up.
-before <- nrow(out)
-
-out <- out[!((out$date >= '2015-06-05' & out$date <= '2015-06-07') &
-               out$rider == 'Kathrin Schweinberger'),]
-out <- out[!((out$date >= '2015-07-09' & out$date <= '2015-07-10') &
-               out$rider == 'Kathrin Schweinberger'),]
-out <- out[!((out$date >= '2016-04-28' & out$date <= '2016-05-01') &
-               out$rider == 'Kathrin Schweinberger'),]
-
-after <- nrow(out)
-stopifnot(before - after == 20)
+# Step 0: Fix PCS errors
+out <- fix_pcs_results_women(pcs::rider_records_women)
 
 
 # Finally: Check & Export data
-duplicates <- findDuplicateResults(out)
+duplicates <- find_duplicate_results(out)
 stopifnot(nrow(duplicates) == 0)
 
 rider_records_women <- out
