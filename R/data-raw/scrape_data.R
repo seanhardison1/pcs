@@ -6,6 +6,7 @@ library(tidyr)
 library(readr)
 
 source("R/data-raw/functions.R")
+source("R/data-raw/maintenance/pcs_fixing.R")
 
 
 # Get URL of latest rankings
@@ -27,6 +28,8 @@ rider_records_men <-
   full_join(., pcs_data$results) %>%
   distinct()
 
+# Fix PCS errors
+rider_records_men <- fix_pcs_results_men(rider_records_men)
 # Check for duplicates
 duplicates_men <- find_duplicate_results(rider_records_men) %>% nrow()
 stopifnot(duplicates_men == 0)
@@ -50,6 +53,8 @@ rider_records_women <-
   full_join(., pcs_data$results) %>%
   distinct()
 
+# Fix PCS errors
+rider_records_women <- fix_pcs_results_women(rider_records_women)
 # Check for duplicates
 duplicates_women <- find_duplicate_results(rider_records_women) %>% nrow()
 stopifnot(duplicates_women == 0)
