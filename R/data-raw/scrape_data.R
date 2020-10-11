@@ -31,8 +31,9 @@ rider_records_men <-
 # Fix PCS errors
 rider_records_men <- fix_pcs_results_men(rider_records_men)
 # Check for duplicates
-duplicates_men <- find_duplicate_results(rider_records_men) %>% nrow()
-stopifnot(duplicates_men == 0)
+duplicates_men <- find_duplicate_results(rider_records_men)
+n_dupm <- duplicates_men %>% nrow()
+stopifnot(n_dupm  == 0)
 
 ### ----------------------------------------------------------------------------
 
@@ -56,8 +57,9 @@ rider_records_women <-
 # Fix PCS errors
 rider_records_women <- fix_pcs_results_women(rider_records_women)
 # Check for duplicates
-duplicates_women <- find_duplicate_results(rider_records_women) %>% nrow()
-stopifnot(duplicates_women == 0)
+duplicates_women <- find_duplicate_results(rider_records_women)
+n_dupw <- duplicates_women %>% nrow()
+stopifnot(n_dupw  == 0)
 
 ### ----------------------------------------------------------------------------
 
