@@ -119,6 +119,153 @@ fix_pcs_results_women <- function(results)
                  out$result != 6),]
   # ----------------------------------------------------------------------------
   #   This is glitch in PCS data!
+  out <- out[!(out$date == '2011-07-08' &
+                 out$race == 'Tour De Feminin - O Cenu Ceského Švýcarska (2.2)' &
+                 out$stage == 'Stage 2 - Jiríkov › Jiríkov' &
+                 out$rider == 'Jarmila Machačová' &
+                 out$result != 69),]
+  out <- out[!(out$date == '2011-07-09' &
+                 out$race == 'Tour De Feminin - O Cenu Ceského Švýcarska (2.2)' &
+                 out$stage == 'Stage 3 (ITT) - Bogatynia › Bogatynia' &
+                 out$rider == 'Jarmila Machačová' &
+                 out$result != 83),]
+  out <- out[!(out$date == '2011-07-09' &
+                 out$race == 'Tour De Feminin - O Cenu Ceského Švýcarska (2.2)' &
+                 out$stage == 'Stage 4 - Rumburk › Rumburk' &
+                 out$rider == 'Jarmila Machačová' &
+                 out$result != 998),]
+  out <- out[!(out$date == '2011-07-10' &
+                 out$race == 'Tour De Feminin - O Cenu Ceského Švýcarska (2.2)' &
+                 out$stage == 'Stage 6 - Varnsdorf › Krásná Lípa' &
+                 out$rider == 'Jarmila Machačová'),]
+  out <- out[!(out$race == 'Tour De Feminin - O Cenu Ceského Švýcarska (2.2)' &
+                 out$stage == 'General classification' &
+                 out$rider == 'Jarmila Machačová'),]
+  # ----------------------------------------------------------------------------
+  out <- out[!(out$date == '2014-04-27' &
+                 out$race == 'Dwars door de Westhoek (1.1)' &
+                 out$rider == 'Anna van der Breggen' &
+                 out$pointspcs != 80),]
+  out <- out[!(out$date == '2014-04-27' &
+                 out$race == 'Dwars door de Westhoek (1.1)' &
+                 out$rider == 'Christine Majerus' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2014-04-27' &
+                 out$race == 'Dwars door de Westhoek (1.1)' &
+                 out$rider == "Jolien d'Hoore" &
+                 out$pointspcs != 56),]
+  out <- out[!(out$date == '2014-04-27' &
+                 out$race == 'Dwars door de Westhoek (1.1)' &
+                 out$rider == 'Katarzyna Niewiadoma' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2014-04-27' &
+                 out$race == 'Dwars door de Westhoek (1.1)' &
+                 out$rider == 'Lucy van der Haar' &
+                 out$pointspcs != 32),]
+  out <- out[!(out$date == '2014-04-27' &
+                 out$race == 'Dwars door de Westhoek (1.1)' &
+                 out$rider == 'Maria Giulia Confalonieri' &
+                 out$pointspcs != 8),]
+  # ----------------------------------------------------------------------------
+  out <- out[!(out$date == '2014-05-02' &
+                 out$race == 'Prologue - Luxembourg › Luxembourg' &
+                 out$rider == 'Amy Pieters' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2014-05-02' &
+                 out$race == 'Prologue - Luxembourg › Luxembourg' &
+                 out$rider == 'Anna van der Breggen' &
+                 out$pointspcs != 4),]
+  out <- out[!(out$date == '2014-05-02' &
+                 out$race == 'Prologue - Luxembourg › Luxembourg' &
+                 out$rider == 'Elizabeth Deignan' &
+                 out$pointspcs != 5),]
+  out <- out[!(out$date == '2014-05-02' &
+                 out$race == 'Prologue - Luxembourg › Luxembourg' &
+                 out$rider == 'Ellen van Dijk' &
+                 out$pointspcs != 11),]
+  out <- out[!(out$date == '2014-05-02' &
+                 out$race == 'Prologue - Luxembourg › Luxembourg' &
+                 out$rider == 'Marianne Vos' &
+                 out$pointspcs != 16),]
+  # ----------------------------------------------------------------------------
+  out <- out[!(out$date == '2014-05-03' &
+                 out$race == 'Festival Luxembourgeois du cyclisme féminin Elsy Jacobs (2.1)' &
+                 out$stage == 'Stage 1 - Garnich › Garnich' &
+                 out$rider == 'Amy Pieters' &
+                 out$pointspcs != 2),]
+  out <- out[!(out$date == '2014-05-03' &
+                 out$race == 'Festival Luxembourgeois du cyclisme féminin Elsy Jacobs (2.1)' &
+                 out$stage == 'Stage 1 - Garnich › Garnich' &
+                 out$rider == 'Anna van der Breggen' &
+                 out$pointspcs != 16),]
+  out <- out[!(out$date == '2014-05-03' &
+                 out$race == 'Festival Luxembourgeois du cyclisme féminin Elsy Jacobs (2.1)' &
+                 out$stage == 'Stage 1 - Garnich › Garnich' &
+                 out$rider == 'Ashleigh Moolman' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2014-05-03' &
+                 out$race == 'Festival Luxembourgeois du cyclisme féminin Elsy Jacobs (2.1)' &
+                 out$stage == 'Stage 1 - Garnich › Garnich' &
+                 out$rider == 'Marianne Vos' &
+                 out$pointspcs != 5),]
+  # ----------------------------------------------------------------------------
+  out <- out[!(out$date == '2014-05-04' &
+                 out$race == 'Festival Luxembourgeois du cyclisme féminin Elsy Jacobs (2.1)' &
+                 out$stage == 'Stage 2 - Mamer › Mamer' &
+                 out$rider == 'Aude Biannic' &
+                 out$pointspcs != 2),]
+  out <- out[!(out$date == '2014-05-04' &
+                 out$race == 'Festival Luxembourgeois du cyclisme féminin Elsy Jacobs (2.1)' &
+                 out$stage == 'Stage 2 - Mamer › Mamer' &
+                 out$rider == 'Barbara Guarischi' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2014-05-04' &
+                 out$race == 'Festival Luxembourgeois du cyclisme féminin Elsy Jacobs (2.1)' &
+                 out$stage == 'Stage 2 - Mamer › Mamer' &
+                 out$rider == 'Christine Majerus' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2014-05-04' &
+                 out$race == 'Festival Luxembourgeois du cyclisme féminin Elsy Jacobs (2.1)' &
+                 out$stage == 'Stage 2 - Mamer › Mamer' &
+                 out$rider == 'Elisa Longo Borghini' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2014-05-04' &
+                 out$race == 'Festival Luxembourgeois du cyclisme féminin Elsy Jacobs (2.1)' &
+                 out$stage == 'Stage 2 - Mamer › Mamer' &
+                 out$rider == 'Ellen van Dijk' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2014-05-04' &
+                 out$race == 'Festival Luxembourgeois du cyclisme féminin Elsy Jacobs (2.1)' &
+                 out$stage == 'Stage 2 - Mamer › Mamer' &
+                 out$rider == 'Marianne Vos' &
+                 out$pointspcs != 16),]
+  # ----------------------------------------------------------------------------
+  out <- out[!(out$date == '2015-05-31' &
+                 out$race == 'SwissEver GP Cham-Hagendorn (1.2)' &
+                 out$rider == 'Kathrin Schweinberger' &
+                 out$result != 64),]
+  # ----------------------------------------------------------------------------
+  out <- out[!(out$date == '2015-06-26' &
+                 out$race == 'National Championships Austria WE - ITT (NC)' &
+                 out$rider == 'Kathrin Schweinberger' &
+                 out$result != 7),]
+  # ----------------------------------------------------------------------------
+  out <- out[!(out$date == '2015-06-28' &
+                 out$race == 'National Championships Austria WE - Road Race (NC)' &
+                 out$rider == 'Kathrin Schweinberger' &
+                 out$result != 999),]
+  # ----------------------------------------------------------------------------
+  out <- out[!(out$date == '2015-06-28' &
+                 out$race == 'National Championships Slovenia WE - Road Race (NC)' &
+                 out$rider == 'Urška Žigart' &
+                 out$result != 9),]
+  # ----------------------------------------------------------------------------
+  out <- out[!(out$date == '2016-05-22' &
+                 out$race == 'SwissEver GP Cham - Hagendorn (1.2)' &
+                 out$rider == 'Kathrin Schweinberger' &
+                 out$result != 999),]
+  # ----------------------------------------------------------------------------
+  #   This is glitch in PCS data!
   #   Sorry, Kathrin... PCS messed up.
   out <- out[!((out$date >= '2015-06-05' & out$date <= '2015-06-07') &
                  out$rider == 'Kathrin Schweinberger'),]
@@ -126,6 +273,88 @@ fix_pcs_results_women <- function(results)
                  out$rider == 'Kathrin Schweinberger'),]
   out <- out[!((out$date >= '2016-04-28' & out$date <= '2016-05-01') &
                  out$rider == 'Kathrin Schweinberger'),]
+  # ----------------------------------------------------------------------------
+  # This one is tricky: Olena Pavlukhina got stripped from
+  # her 40th place in WC 2016 results.
+  wwc <- out %>% subset(out$date == '2016-10-15' &
+                          out$race == 'World Championships WE - Road Race (WC)')
+  old <- wwc %>%
+    group_by(rider) %>%
+    summarise(nres = n(), maxres = max(result)) %>%
+    subset(nres > 1) %>%
+    dplyr::select(-nres)
+  new <- subset(wwc,
+                wwc$rider %in% old$rider & wwc$result %in% old$maxres)
+  out <- anti_join(out, new)
+  # ----------------------------------------------------------------------------
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Cecilie Uttrup Ludwig' &
+                 out$pointspcs != 90),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Demi Vollering' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Elisa Balsamo' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Erica Magnaldi' &
+                 out$pointspcs != 2),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Évita Muzic' &
+                 out$pointspcs != 9),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Katarzyna Niewiadoma' &
+                 out$pointspcs != 4),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Katia Ragusa' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Pauliena Rooijakkers' &
+                 out$pointspcs != 36),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Rachel Neylan' &
+                 out$pointspcs != 7),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Rasa Leleivytė' &
+                 out$pointspcs != 63),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Sabrina Stultiens' &
+                 out$pointspcs != 22),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Silvia Zanardi' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Soraya Paladin' &
+                 out$pointspcs != 18),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Špela Kern' &
+                 out$pointspcs != 6),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Stine Borgli' &
+                 !is.na(out$pointspcs)),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Tatiana Guderzo' &
+                 out$pointspcs != 13),]
+  out <- out[!(out$date == '2020-08-18' &
+                 out$race == "Giro dell'Emilia Internazionale Donne Elite (1.Pro)" &
+                 out$rider == 'Urša Pintar' &
+                 out$pointspcs != 27),]
   # ----------------------------------------------------------------------------
   return(out)
 }
