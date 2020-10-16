@@ -37,5 +37,5 @@ tp1 <- anti_join(p1, dups, by = c("rider", "date", "race", "stage"))
 out <- full_join(tp1, p2)
 
 # are we good?
-test <- find_duplicate_results(p1)
+test <- find_duplicate_results(out)
 stopifnot(nrow(test) == 0)
