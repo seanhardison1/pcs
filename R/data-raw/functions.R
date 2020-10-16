@@ -346,6 +346,35 @@ find_duplicate_results <- function(data)
   )
 }
 
+#' Consistence function: uses actual result if already exists
+#' 
+#' \code{consolidate_results} combines existing results and
+#' actual data (fresh scraped), actual record replaces existing one.
+#' Function fails (`stopifnot`) when check on duplicates fails
+#' (asserted by `find_duplicate_results`)!
+#' 
+#' @param existing Existing records data frame.
+#' @param actual Records to be updated in existing data frame.
+#' @return Consolidated records without duplicates
+consolidate_results <- function(existing, actual)
+{
+  # combine both data frames
+  out <- full_join(existing, actual)
+  # identify duplicates
+  dups <- find_duplicate_results(out)
+  
+  # remove every duplicate record from existing df using dups' columns
+  # as rider/date/race/stage key
+  tp1 <- anti_join(existing, dups, by = c("rider", "date", "race", "stage"))
+  # join with latest data
+  out <- full_join(tp1, actual)
+  
+  # are we good?
+  test <- find_duplicate_results(out)
+  stopifnot(nrow(test) == 0)
+  return(out)
+}
+
 
 #' Main PCS scraping function
 #' 

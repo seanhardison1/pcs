@@ -22,18 +22,11 @@ rider_profiles_men <-
   full_join(., pcs_data$profiles) %>%
   distinct()
 
-# Use distinct records only
-rider_records_men <-
-  pcs::rider_records_men %>%
-  full_join(., pcs_data$results) %>%
-  distinct()
-
-# Fix PCS errors
-rider_records_men <- fix_pcs_results_men(rider_records_men)
-# Check for duplicates
-duplicates_men <- find_duplicate_results(rider_records_men)
-n_dupm <- duplicates_men %>% nrow()
-stopifnot(n_dupm  == 0)
+# Consolidate records
+rider_records_men <- consolidate_results(
+  fix_pcs_results_men(pcs::rider_records_men),
+  fix_pcs_results_men(pcs_data$results)
+)
 
 ### ----------------------------------------------------------------------------
 
@@ -49,17 +42,12 @@ rider_profiles_women <-
   full_join(., pcs_data$profiles) %>%
   distinct()
 
-rider_records_women <-
-  pcs::rider_records_women %>%
-  full_join(., pcs_data$results) %>%
-  distinct()
+# Consolidate records
+rider_records_women <- consolidate_results(
+  fix_pcs_results_women(pcs::rider_records_women),
+  fix_pcs_results_women(pcs_data$results)
+)
 
-# Fix PCS errors
-rider_records_women <- fix_pcs_results_women(rider_records_women)
-# Check for duplicates
-duplicates_women <- find_duplicate_results(rider_records_women)
-n_dupw <- duplicates_women %>% nrow()
-stopifnot(n_dupw  == 0)
 
 ### ----------------------------------------------------------------------------
 
