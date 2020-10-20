@@ -6,6 +6,7 @@ library(tidyr)
 library(readr)
 
 source("R/data-raw/functions.R")
+source("R/data-raw/maintenance/pcs_fixing.R")
 
 
 # Get URL of latest rankings
@@ -21,11 +22,13 @@ rider_profiles_men <-
   full_join(., pcs_data$profiles) %>%
   distinct()
 
-# Use distinct records only
-rider_records_men <-
-  pcs::rider_records_men %>%
-  full_join(., pcs_data$results) %>%
-  distinct()
+# Consolidate records
+rider_records_men <- consolidate_results(
+  fix_pcs_results_men(pcs::rider_records_men),
+  fix_pcs_results_men(pcs_data$results)
+)
+
+### ----------------------------------------------------------------------------
 
 #
 # Same for women elite
@@ -39,10 +42,14 @@ rider_profiles_women <-
   full_join(., pcs_data$profiles) %>%
   distinct()
 
-rider_records_women <-
-  pcs::rider_records_women %>%
-  full_join(., pcs_data$results) %>%
-  distinct()
+# Consolidate records
+rider_records_women <- consolidate_results(
+  fix_pcs_results_women(pcs::rider_records_women),
+  fix_pcs_results_women(pcs_data$results)
+)
+
+
+### ----------------------------------------------------------------------------
 
 # Export
 usethis::use_data(rider_profiles_men,
