@@ -242,14 +242,14 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
   rider <- str_squish(rider_metadata[[1]][1])
   team <- str_squish(rider_metadata[[1]][2])
 
-
   seasonResults <- rider_html %>%
     html_nodes(xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "minh2", " " ))]') %>%
     html_nodes(".seasonResults") %>%
     html_text() %>%
     unique()
   
-  if(length(seasonResults) == 0){
+  if(length(seasonResults) == 0)
+  {
     seasonResults <- rider_html %>%
       html_nodes(xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content", " " ))]') %>% html_nodes(".seasonResults") %>%
       html_text() %>%
