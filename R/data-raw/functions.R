@@ -161,7 +161,8 @@ parse_rider_profile <- function(rider_html)
 
   if (str_detect(jumbled, "Nationality")){
     nationality <- jumbled %>%
-      str_extract("(?<=Nationality: )([A-Z][a-z]*)")
+      str_extract("(?<=Nationality: )(.*)Weight") %>%
+      str_remove("Weight$")
   } else {
     nationality <- NA
   }
