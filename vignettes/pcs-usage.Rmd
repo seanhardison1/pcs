@@ -9,7 +9,7 @@ output:
 params:
   EVAL: !r TRUE
 vignette: >
-  %\VignetteIndexEntry{Introduction to pcs}
+  %\VignetteIndexEntry{PCS Usage}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -24,7 +24,7 @@ The objective of the `pcs` package is to facilitate the analysis of professional
 
 ## Rider biographical data
 
-### From where do most current professionl cyclists originate?
+### What countries are well represented in the peloton?
 
 ```{r, message=F, warning=F}
 library(pcs)
