@@ -19,7 +19,7 @@ library(readr)
 read_html_safe <- function(url, tries = 3)
 {
   res_html <- NULL
-  while (tries > 0 & is.null(res_html))
+  while (tries > 0 && is.null(res_html))
   {
     tryCatch(
     {
@@ -227,8 +227,9 @@ parse_rider_profile <- function(rider_html)
 #'
 #' @param rider_id Rider's profile ID
 #' @param rider_html HTML code of rider's profile page
+#' @param seasons (optional) Vector of covered seasons (as integers), all if \code{NULL} (default)
 #' @return Rider results (see \code{rider_records_men} documentation)
-parse_rider_results <- function(rider_id, rider_html)
+parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
 {
   rider_season_output <- NULL
 
@@ -241,25 +242,31 @@ parse_rider_results <- function(rider_id, rider_html)
   rider <- str_squish(rider_metadata[[1]][1])
   team <- str_squish(rider_metadata[[1]][2])
 
-
-  seasons <- rider_html %>%
+  seasonResults <- rider_html %>%
     html_nodes(xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "minh2", " " ))]') %>%
     html_nodes(".seasonResults") %>%
     html_text() %>%
     unique()
   
-  if(length(seasons) == 0){
-    seasons <- rider_html %>%
+  if(length(seasonResults) == 0)
+  {
+    seasonResults <- rider_html %>%
       html_nodes(xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "content", " " ))]') %>% html_nodes(".seasonResults") %>%
       html_text() %>%
       unique()
   }
 
-  for (j in 1:length(seasons))
+  for (j in 1:length(seasonResults))
   {
+    year <- seasonResults[j]
+    if (!(is.null(seasons)) && !(year %in% seasons))
+    {
+      next
+    }
+
     Sys.sleep(1)
-    message(paste(rider, seasons[j]))
-    rider_season_url <- paste0(rider_id, "/", seasons[j])
+    message(paste(rider, year))
+    rider_season_url <- paste0(rider_id, "/", year)
     rider_season_site <- read_html_safe(rider_season_url)
     rider_season_table <- rider_season_site %>%
       html_nodes("table") %>%
@@ -301,14 +308,14 @@ parse_rider_results <- function(rider_id, rider_html)
 
       output <- bind_rows(one_day_init,
                           gt_init) %>%
-        mutate(Date = ifelse(Date != "",paste0(Date,".",seasons[j]),NA),
+        mutate(Date = ifelse(Date != "",paste0(Date,".",year),NA),
                Date = as.Date(Date, "%d.%m.%Y"),
                rider = rider,
                team = team)
     } else {
       output <-
         rider_season_table %>%
-        mutate(Date = ifelse(Date != "",paste0(Date,".",seasons[j]),NA),
+        mutate(Date = ifelse(Date != "",paste0(Date,".",year),NA),
                Date = as.Date(Date, "%d.%m.%Y"),
                stage = "One day",
                rider  = rider,
@@ -382,10 +389,11 @@ consolidate_results <- function(existing, actual)
 #' for given vector of rider IDs.
 #' 
 #' @param rider_urls Vector of rider's profile IDs
+#' @param seasons (optional) Vector of covered seasons (as integers), all if \code{NULL} (default)
 #' @return List of two data frames (\code{profiles} and \code{results}).
 #'   See \code{rider_profiles_men} and \code{rider_records_men} documentation
 #'   for details.
-get_pcs_data <- function(rider_urls)
+get_pcs_data <- function(rider_urls, seasons = NULL)
 {
   rider_profiles <- NULL
   rider_results <- NULL
@@ -399,7 +407,7 @@ get_pcs_data <- function(rider_urls)
     message(profile_out["rider"])
     assign('rider_profiles', rbind(profile_out, rider_profiles))
     
-    results_out <- parse_rider_results(rider_url, rider_html)
+    results_out <- parse_rider_results(rider_url, rider_html, seasons)
     assign('rider_results', rbind(results_out, rider_results))
   }
   return(list("profiles" = rider_profiles,
