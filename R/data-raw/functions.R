@@ -372,6 +372,36 @@ find_duplicate_results <- function(data)
 }
 
 
+#' Consistence function: uses actual profile if already exists
+#' 
+#' \code{consolidate_profiles} combines existing profiles and
+#' actual data (fresh scraped), actual profiles replaces existing one.
+#' Function fails (`stopifnot`) when check on duplicates fails
+#' (asserted by `find_duplicate_profiles`)!
+#' 
+#' @param existing Existing records data frame.
+#' @param actual Records to be updated in existing data frame.
+#' @return Consolidated records without duplicates
+consolidate_profiles <- function(existing, actual)
+{
+  # combine both data frames
+  out <- full_join(existing, actual)
+  # identify duplicates
+  dups <- find_duplicate_profiles(out)
+  
+  # remove every duplicate record from existing df using dups' columns
+  # as rider/dob key
+  tp1 <- anti_join(existing, dups, by = c("rider", "dob"))
+  # join with latest data
+  out <- full_join(tp1, actual)
+  
+  # are we good?
+  test <- find_duplicate_profiles(out)
+  stopifnot(nrow(test) == 0)
+  return(out)
+}
+
+
 #' Consistence function: uses actual result if already exists
 #' 
 #' \code{consolidate_results} combines existing results and

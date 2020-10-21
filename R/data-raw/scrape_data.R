@@ -16,11 +16,10 @@ rider_urls <- get_rider_urls(rankings_url)
 # Get profiles and results for each rider
 pcs_data <- get_pcs_data(rider_urls)
 
-# Use distinct profiles only
-rider_profiles_men <-
-  pcs::rider_profiles_men %>%
-  full_join(., pcs_data$profiles) %>%
-  distinct()
+# Consolidate profiles
+rider_profiles_men <- consolidate_profiles(
+  pcs::rider_profiles_men,
+  pcs_data$profiles)
 
 # Consolidate records
 rider_records_men <- consolidate_results(
@@ -37,10 +36,9 @@ rankings_url <- get_ranking_url("https://www.procyclingstats.com/rankings.php/we
 rider_urls <- get_rider_urls(rankings_url)
 pcs_data <- get_pcs_data(rider_urls)
 
-rider_profiles_women <-
-  pcs::rider_profiles_women %>%
-  full_join(., pcs_data$profiles) %>%
-  distinct()
+rider_profiles_women <- consolidate_profiles(
+  pcs::rider_profiles_women,
+  pcs_data$profiles)
 
 # Consolidate records
 rider_records_women <- consolidate_results(
