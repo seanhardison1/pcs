@@ -335,6 +335,23 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
 }
 
 
+#' Validation function: lists duplicate profiles per rider/dob
+#'
+#' \code{find_duplicate_profiles} returns duplicate profiles from profiles data frame.
+#' Only *one* rider (name) per *one* date of birth is allowed.
+#' 
+#' @param data Profiles data frame.
+#' @return Duplicate profiles.
+find_duplicate_profiles <- function(data)
+{
+  return(data %>%
+           group_by(rider, dob) %>%
+           summarise(nrecs = n()) %>%
+           subset(nrecs > 1)
+  )
+}
+
+
 #' Validation function: lists duplicate results per rider/date/race
 #'
 #' \code{find_duplicate_results} returns duplicate results from records data frame.
@@ -342,7 +359,7 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
 #' allowed.
 #' 
 #' @param data Results data frame.
-#' @return Duplicate \code{results}).
+#' @return Duplicate results.
 find_duplicate_results <- function(data)
 {
   return(data %>%
@@ -353,6 +370,7 @@ find_duplicate_results <- function(data)
            arrange(date, race)
   )
 }
+
 
 #' Consistence function: uses actual result if already exists
 #' 
