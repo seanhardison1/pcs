@@ -49,18 +49,18 @@ fix_duplicate_profiles <- function(profiles)
     )
     message(response$status_code)
 
-    cntnt <- response %>% content() %>%
+    div <- response %>% content() %>%
       html_nodes(xpath = "//div[@class='content ']")
-    foo <- cntnt %>%
+    h3 <- div %>%
       html_nodes(xpath = "h3")
 
-    if (length(foo) > 0 && html_text(foo) == "Search results")
+    if (length(h3) > 0 && html_text(h3) == "Search results")
     {
-      bar <- cntnt %>%
+      rider_url <- div %>%
         html_nodes(xpath = "div[3]/a") %>%
         html_attr("href")
       response <- GET(
-        paste0("https://www.procyclingstats.com/", bar),
+        paste0("https://www.procyclingstats.com/", rider_url),
         handle = h,
         user_agent(usr_agent)
       )
