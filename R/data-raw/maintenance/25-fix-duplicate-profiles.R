@@ -65,18 +65,11 @@ fix_duplicate_profiles <- function(profiles)
         user_agent(usr_agent)
       )
       message(response$status_code)
-      
+
     }
-    
+
     rider_profile <- parse_rider_profile(response %>% content())
     new <- rbind(new, rider_profile)
-
-    # tryCatch({
-    # },
-    # error = function(e)
-    # {
-    #   message(e)
-    # })
 
     Sys.sleep(4.444)
   }
