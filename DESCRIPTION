@@ -2,10 +2,14 @@ Package: pcs
 Title: A package for accessing rider data from ProCyclingStats.com
 Version: 0.0.0.9000
 Authors@R: 
+  c(
     person(given = "Sean",
            family = "Hardison",
            role = c("aut", "cre"),
-           email = "seanhardison@gmail.com")
+           email = "seanhardison@gmail.com"),
+    person(given = "Libor",
+           family = "Pospíchal",
+           role = c("aut")))
 Maintainer: Sean Hardison <seanhardison@gmail.com>
 Description: pcs scrapes and aggregates rider data from procyclingstats.com.
 License: CC0
