@@ -154,7 +154,7 @@ parse_rider_profile <- function(rider_html)
       str_extract("(?<=:).*(?=\\()") %>%
       str_remove("th|nd|rd|st") %>%
       str_squish() %>%
-      as.Date(., format = "%d %B %Y")
+      parse_date(., format = "%d %B %Y")
   } else {
     dob <- NA
   }
@@ -310,14 +310,14 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
       output <- bind_rows(one_day_init,
                           gt_init) %>%
         mutate(Date = ifelse(Date != "",paste0(Date,".",year),NA),
-               Date = as.Date(Date, "%d.%m.%Y"),
+               Date = parse_date(Date, format = "%d.%m.%Y"),
                rider = rider,
                team = team)
     } else {
       output <-
         rider_season_table %>%
         mutate(Date = ifelse(Date != "",paste0(Date,".",year),NA),
-               Date = as.Date(Date, "%d.%m.%Y"),
+               Date = parse_date(Date, format = "%d.%m.%Y"),
                stage = "One day",
                rider  = rider,
                team = team)
