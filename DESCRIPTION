@@ -9,7 +9,7 @@ Authors@R:
            email = "seanhardison@gmail.com"),
     person(given = "Libor",
            family = "Pospíchal",
-           role = c("cre"))
+           role = c("cre")))
 Maintainer: Sean Hardison <seanhardison@gmail.com>
 Description: pcs scrapes and aggregates rider data from procyclingstats.com.
 License: CC0
