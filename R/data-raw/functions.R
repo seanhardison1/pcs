@@ -154,14 +154,15 @@ parse_rider_profile <- function(rider_html)
       str_extract("(?<=:).*(?=\\()") %>%
       str_remove("th|nd|rd|st") %>%
       str_squish() %>%
-      as.Date(., format = "%d %B %Y")
+      parse_date(., format = "%d %B %Y")
   } else {
     dob <- NA
   }
 
   if (str_detect(jumbled, "Nationality")){
     nationality <- jumbled %>%
-      str_extract("(?<=Nationality: )([A-Z][a-z]*)")
+      str_extract("(?<=Nationality: )(.*)Weight") %>%
+      str_remove("Weight$")
   } else {
     nationality <- NA
   }
@@ -309,14 +310,14 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
       output <- bind_rows(one_day_init,
                           gt_init) %>%
         mutate(Date = ifelse(Date != "",paste0(Date,".",year),NA),
-               Date = as.Date(Date, "%d.%m.%Y"),
+               Date = parse_date(Date, format = "%d.%m.%Y"),
                rider = rider,
                team = team)
     } else {
       output <-
         rider_season_table %>%
         mutate(Date = ifelse(Date != "",paste0(Date,".",year),NA),
-               Date = as.Date(Date, "%d.%m.%Y"),
+               Date = parse_date(Date, format = "%d.%m.%Y"),
                stage = "One day",
                rider  = rider,
                team = team)
@@ -334,6 +335,23 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
 }
 
 
+#' Validation function: lists duplicate profiles per rider/dob
+#'
+#' \code{find_duplicate_profiles} returns duplicate profiles from profiles data frame.
+#' Only *one* rider (name) per *one* date of birth is allowed.
+#' 
+#' @param data Profiles data frame.
+#' @return Duplicate profiles.
+find_duplicate_profiles <- function(data)
+{
+  return(data %>%
+           group_by(rider, dob) %>%
+           summarise(nrecs = n()) %>%
+           subset(nrecs > 1)
+  )
+}
+
+
 #' Validation function: lists duplicate results per rider/date/race
 #'
 #' \code{find_duplicate_results} returns duplicate results from records data frame.
@@ -341,7 +359,7 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
 #' allowed.
 #' 
 #' @param data Results data frame.
-#' @return Duplicate \code{results}).
+#' @return Duplicate results.
 find_duplicate_results <- function(data)
 {
   return(data %>%
@@ -352,6 +370,37 @@ find_duplicate_results <- function(data)
            arrange(date, race)
   )
 }
+
+
+#' Consistence function: uses actual profile if already exists
+#' 
+#' \code{consolidate_profiles} combines existing profiles and
+#' actual data (fresh scraped), actual profiles replaces existing one.
+#' Function fails (`stopifnot`) when check on duplicates fails
+#' (asserted by `find_duplicate_profiles`)!
+#' 
+#' @param existing Existing records data frame.
+#' @param actual Records to be updated in existing data frame.
+#' @return Consolidated records without duplicates
+consolidate_profiles <- function(existing, actual)
+{
+  # combine both data frames
+  out <- full_join(existing, actual)
+  # identify duplicates
+  dups <- find_duplicate_profiles(out)
+  
+  # remove every duplicate record from existing df using dups' columns
+  # as rider/dob key
+  tp1 <- anti_join(existing, dups, by = c("rider", "dob"))
+  # join with latest data
+  out <- full_join(tp1, actual)
+  
+  # are we good?
+  test <- find_duplicate_profiles(out)
+  stopifnot(nrow(test) == 0)
+  return(out)
+}
+
 
 #' Consistence function: uses actual result if already exists
 #' 

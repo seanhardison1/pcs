@@ -1,40 +1,27 @@
 rider,dob,nationality,pob,current_team,weight,height,one_day_races,gc,tt,sprint,climber
 Yenny Colmenares,1991-02-15,Colombia,Duitama,NA,NA,NA,29,20,218,188,75
-Tereza Medveďová,1996-03-27,Slovakia,Brezno,WCC Team,NA,NA,44,8,142,7,39
 Gracie Elvin,1988-10-31,Australia,Canberra,Mitchelton-Scott,63,1.75,704,173,333,1401,388
-Grace Brown,1992-07-07,Australia,Camperdown,Mitchelton-Scott,NA,1.68,56,29,72,107,258
-Anna Kiesenhofer,1991-02-14,Austria,NA,NA,NA,NA,10,30,44,6,110
-Victorie Guilman,1996-03-25,France,Angoulême,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,28,4,0,90,157
 Marcela Prieto,1992-03-11,Mexico,NA,Agolico,NA,NA,78,188,325,272,395
 Séverine Eraud,1995-02-24,France,NA,Charente-Maritime Women Cycling,NA,NA,76,42,535,319,454
 Lourdes Oyarbide,1994-04-08,Spain,Eguino,Movistar Team,52,1.61,26,44,171,153,104
 Kseniya Dobrynina,1994-01-11,Russia,NA,Servetto - Piumate - Beltrami TSA,NA,NA,48,50,536,143,140
-Jutatip Maneephan,1988-07-08,Thailand,Roi Et,Alé BTC Ljubljana,59,1.57,227,432,3,1505,93
 Rushlee Buchanan,1988-01-20,New,Hamilton,NA,NA,NA,51,11,372,152,12
 Ayustina Priatna,1997-12-12,Indonesia,NA,Thailand Women's Cycling Team,54,1.59,42,0,0,36,0
 Idarys Cervantes,1997-04-22,Cuba,NA,NA,NA,NA,26,0,0,46,0
 Agusta Edda Bjornsdóttir,1977-03-15,Iceland,NA,NA,NA,NA,25,0,6,0,0
 Lonneke Uneken,2000-03-02,Netherlands,Winschoten,Boels - Dolmans Cycling Team,NA,NA,54,26,6,289,0
 Viktoriia Melnychuk,1998-06-02,Ukraine,NA,NA,NA,NA,28,0,0,58,0
-Charlotte Kool,1999-05-06,Netherlands,NA,NXTG Racing,NA,NA,46,0,14,114,0
 Ella Bloor,1995-04-03,Australia,NA,NA,NA,NA,16,0,0,36,0
-Galina Chernyshova,1993-11-21,Russia,NA,Sestroretsk,NA,NA,50,0,28,158,128
 Whitney Allison-Schultz,1988-03-01,United,NA,NA,NA,NA,3,13,218,16,190
-Mikayla Harvey,1998-09-07,New,NA,Équipe Paule Ka,NA,1.71,33,0,136,94,87
 Justine Barrow,1979-03-07,Australia,NA,Roxsolt Attaquer,NA,NA,37,8,3,40,151
 Maëlle Grossetête,1998-04-10,France,Sallanches,FDJ Nouvelle Aquitaine Futuroscope,60,1.72,40,7,11,112,0
-Elena Franchi,1996-08-26,Italy,NA,Eurotarget - Bianchi - Vittoria,NA,NA,24,30,28,144,70
 Kaya Cattouse,1990-12-12,Belize,NA,NA,NA,NA,41,0,8,18,0
-Alena Amialiusik,1989-02-06,Belarus,Babruysk,Canyon SRAM Racing,53,1.69,1277,668,2127,1162,3261
 Anna Henderson,1998-11-14,Great,NA,Team Sunweb,58,1.62,30,34,0,223,0
 Laura Asencio,1998-05-14,France,NA,Ceratizit-WNT Pro Cycling,NA,NA,27,0,1,96,1
 Jeniffer Alejandra Medellin,1995-12-03,Colombia,Fusagasuga,NA,NA,NA,7,22,101,98,79
-Kathrin Schweinberger,1996-10-29,Austria,NA,Doltcini - Van Eyck Sport,NA,NA,187,36,98,495,42
 Edwige Pitel,1967-06-04,France,Dinan,Cogeas - Mettler Pro Cycling Team,52,1.73,472,489,2691,785,2644
 Elizabeth Holden,1997-09-12,Great,NA,Bizkaia Durango,NA,NA,13,8,38,105,97
 Katie Hall,1987-01-06,United,Mercer Island,Boels - Dolmans Cycling Team,52,1.63,84,795,946,372,1627
-Aude Biannic,1991-03-27,France,Landerneau,Movistar Team,64,1.75,351,211,1353,813,612
-Anouska Koster,1993-08-20,Netherlands,Zwaagwesteinde,Parkhotel Valkenburg,57,1.65,244,209,920,1004,544
 Tetyana Riabchenko,1989-08-28,Ukraine,Zhitomerskaya,NA,57,1.72,330,201,366,430,1145
 Jarmila Machacova,1986-01-09,Czech,NA,NA,NA,NA,84,6,310,143,148
 Anastasiia Pliaskina,1996-02-21,Russia,NA,Eneicat - RBH Global,57,1.7,3,14,80,5,44
@@ -43,41 +30,22 @@ Yixian Pu,1992-12-23,China,NA,China Liv Pro Cycling,NA,NA,78,42,5,201,0
 Emilie Moberg,1991-07-12,Norway,Halden,Drops,56,1.59,378,290,162,1627,408
 Kelly Druyts,1989-10-21,Belgium,Wilrijk,Chevalmeire Cycling Team,62,1.69,379,59,121,1834,411
 Desiet Kidane,2000-10-10,Eritrea,NA,NA,NA,NA,25,0,0,7,0
-Katrine Aalerud,1994-12-04,Norway,Vestby,Movistar Team,54,1.68,28,86,151,66,460
 Matilda Raynolds,1987-06-20,Australia,NA,NA,NA,NA,12,0,12,125,29
 Jeanne Korevaar,1996-09-24,Netherlands,Groot-Ammers,CCC - Liv,59,1.78,71,54,238,445,215
 Moniek Tenniglo,1988-05-02,Netherlands,Albergen,Mitchelton-Scott,64,1.84,49,74,510,237,240
-Daniela Atehortua,1999-03-30,Colombia,Santuario,NA,NA,NA,8,15,12,78,1
-Alice Barnes,1995-07-17,Great,Northampton,Canyon SRAM Racing,59,1.62,172,151,564,764,16
 Samah Khaled,1992-05-01,Jordan,NA,NA,NA,NA,0,16,1,84,0
-Debora Silvestri,1998-05-08,Italy,NA,Top Girls Fassa Bortolo,NA,NA,26,0,30,27,0
 Anna Nahirna,1988-09-30,Ukraine,NA,Lviv Cycling Team women,NA,NA,47,8,40,56,75
-Lisa Nordén,1984-11-24,Sweden,NA,NA,59,1.76,17,0,38,0,0
-Špela Kern,1990-02-24,Slovenia,NA,Lviv Cycling Team women,NA,NA,76,5,14,78,106
-Roxane Fournier,1991-11-07,France,Soisy-sous-Montmorency,Chevalmeire Cycling Team,60,1.66,804,288,142,3048,534
 Coralie Demay,1992-10-10,France,NA,Charente-Maritime Women Cycling,NA,NA,40,100,517,128,21
 Alexi Costa,1995-08-25,Trinidad,NA,NA,NA,NA,12,0,0,49,0
 Nikola Nosková,1997-07-01,Czech,NA,Équipe Paule Ka,NA,1.57,167,55,83,190,536
-Iuliia Galimullina,2001-09-20,Russia,NA,Cogeas - Mettler Pro Cycling Team,NA,NA,30,0,0,71,0
 Zanri Rossouw,1988-03-02,South,NA,NA,51,1.6,7,0,65,14,0
-Mariia Novolodskaia,1999-07-28,Russia,NA,Cogeas - Mettler Pro Cycling Team,57,1.66,102,114,456,490,161
-Évita Muzic,1999-05-26,France,Lons-le-Saunier,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,49,24,0,58,258
 Kirsty Mccallum,1992-09-19,New,NA,NA,NA,NA,51,0,0,99,13
-Polina Kirillova,1997-10-08,Russia,NA,Sestroretsk,NA,NA,73,22,89,221,32
 Jupha Somnet,1993-04-26,Malaysia,NA,NA,54,1.61,80,3,2,102,0
-Sandra Levenez,1979-07-05,France,NA,Team Arkéa,NA,NA,30,0,11,44,5
 Qianyu Yang,1993-03-07,Hongkong,NA,NA,NA,NA,144,43,34,198,10
-Amber Neben,1975-02-18,United,Irvine,Cogeas - Mettler Pro Cycling Team,48,1.6,887,1401,5536,1334,2765
-Simona Frapporti,1988-07-14,Italy,Gavardo,Bepink,63,1.77,111,79,111,1131,187
 Kaat Hannes,1991-11-21,Belgium,Herentals,Doltcini - Van Eyck Sport,51,1.64,260,6,3,913,418
-Stine Borgli,1990-07-04,Norway,Sandnes,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,73,124,91,344,289
 Leidy Natalia Muñoz,1985-06-04,Colombia,Andes,NA,NA,NA,29,28,35,125,16
 Xi Sha Zhao,1992-09-28,China,NA,China Liv Pro Cycling,NA,NA,59,53,0,229,0
-Margarita Syradoeva,1995-04-06,Russia,NA,Sestroretsk,NA,NA,70,8,25,214,16
 Flavia Oliveira,1981-10-27,Brazil,Rio de Janeiro,NA,43,1.57,445,325,773,743,1942
-Mariia Miliaeva,2001-07-16,Russia,NA,Cogeas - Mettler Pro Cycling Team,NA,NA,79,0,0,163,0
-Silvia Zanardi,2000-03-03,Italy,NA,Bepink,NA,NA,33,0,0,70,0
-Vittoria Bussi,1987-03-19,Italy,Rome,NA,NA,NA,0,0,111,12,2
 Shara Marche,1987-12-23,Australia,Nambour,FDJ Nouvelle Aquitaine Futuroscope,58,1.75,375,416,1867,622,1518
 Sarah Gigante,2000-10-06,Australia,NA,Team TIBCO - SVB,NA,NA,45,21,42,75,33
 Clara Copponi,1999-01-12,France,Aix-en-Provence,FDJ Nouvelle Aquitaine Futuroscope,55,1.65,59,0,10,204,0
@@ -85,11 +53,7 @@ Olena Sharga,1986-12-21,Ukraine,NA,Lviv Cycling Team women,NA,NA,203,19,238,488,
 Camila Andrea Valbuena,1997-02-18,Colombia,Bogotá,NA,NA,NA,0,38,170,66,68
 Samara Sheppard,1990-06-25,New,NA,NA,NA,NA,30,7,0,62,0
 Kirsten Wild,1982-10-15,Netherlands,Almelo,Ceratizit-WNT Pro Cycling,75,1.77,3758,1557,2157,9884,1400
-Aurelie Halbwachs,1986-08-24,Mauritius,Curepipe,NA,62,1.67,111,0,48,23,79
 Pascale Jeuland-Tranchant,1987-06-02,France,NA,NA,61,1.61,456,104,219,1699,541
-Olha Kulynych,2000-01-01,Ukraine,NA,Ciclotel,NA,NA,40,0,2,88,17
-Kristabel Doebel-Hickok,1989-04-28,United,Marina del Rey,Rally Cycling Women,NA,NA,82,228,244,293,1096
-Lauren Kitchen,1990-11-21,Australia,Armidale,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,447,128,327,1164,457
 Hanna Nilsson,1992-02-16,Sweden,NA,Parkhotel Valkenburg,NA,NA,156,134,89,293,862
 Marta Lach,1997-05-26,Poland,NA,CCC - Liv,59,1.71,64,21,42,433,104
 Jip van den Bos,1996-04-12,Netherlands,Oostknollendam,Boels - Dolmans Cycling Team,NA,NA,201,80,340,600,32
@@ -99,207 +63,61 @@ Vera Adrian,1993-10-28,Namibia,Windhoek,NA,57,1.68,200,0,70,64,16
 Lotta Henttala,1989-06-28,Finland,Noormarkku,Trek-Segafredo Women,58,1.64,1223,125,1103,2367,129
 Daria Malkova,2000-11-16,Russia,NA,Cogeas - Mettler Pro Cycling Team,NA,NA,56,8,1,162,0
 Hayley Simmonds,1988-07-22,Great,Redditch,Ciclotel,NA,NA,12,39,370,110,94
-Anastasiia Chursina,1995-04-07,Russia,NA,Alé BTC Ljubljana,54,1.69,192,286,424,392,420
 Maroesjka Matthee,1989-01-10,South,NA,Ciclotel,NA,NA,142,0,0,81,58
 Thị Thật Nguyễn,1993-03-06,Vietnam,Long Xuyên,Lotto Soudal Ladies,50,1.65,386,81,0,783,154
-Sabrina Stultiens,1993-07-08,Netherlands,Helmond,CCC - Liv,58,1.74,250,179,318,400,507
-Susanne Andersen,1998-07-23,Norway,Stavanger,Team Sunweb,55,1.64,272,22,158,858,66
 Jessica Pratt,1997-10-09,Australia,Greenville,Canyon SRAM Racing,NA,NA,12,45,0,121,24
-Gladys Verhulst,1997-01-02,France,Le-Grand-Quevilly,Team Arkéa,NA,NA,64,0,0,126,0
-Ilaria Sanguineti,1994-04-15,Italy,NA,Valcar - Travel & Service,NA,NA,201,90,65,969,247
 Sofie De Vuyst,1987-04-02,Belgium,Zottegem,NA,NA,NA,694,185,540,1239,1183
-Rachel Neylan,1982-03-09,Australia,Sydney,Cronos Casa Dorada Women Cycling,52,1.69,440,199,761,537,738
 Omer Shapira,1994-09-09,Israel,NA,Canyon SRAM Racing,58,1.66,115,97,205,32,632
-Elena Cecchini,1992-05-25,Italy,Udine,Canyon SRAM Racing,52,1.68,1190,427,571,2447,1237
-Lucy van der Haar,1994-09-20,Great,Leicester,Hitec Products,NA,NA,356,189,50,1377,60
-Niamh Fisher-Black,2000-08-12,New,NA,Équipe Paule Ka,NA,1.6,56,0,0,120,44
-Ellen van Dijk,1987-02-11,Netherlands,Harmelen,Trek-Segafredo Women,71,1.82,1955,1775,6878,3616,1407
 Jiujin Li,1989-12-14,China,NA,NA,NA,NA,62,0,8,116,0
 Aranza Valentina Villalón,1995-06-18,Chile,Santiago,NA,NA,NA,16,50,234,214,25
-Eider Merino,1994-08-02,Spain,Balmaseda,Movistar Team,40,1.54,99,230,52,178,1048
 Caitlin Conyers,1989-12-31,Bermuda,NA,NA,NA,NA,33,0,0,16,0
 Tanja Erath,1989-10-07,Germany,Heilbronn,Canyon SRAM Racing,NA,NA,41,20,223,119,0
 Olga Zabelinskaya,1980-05-10,Uzbekistan,Saint Petersburg,Cogeas - Mettler Pro Cycling Team,52,1.68,942,688,2442,1331,1150
 Arianna Fidanza,1995-01-06,Italy,Bergamo,Lotto Soudal Ladies,NA,NA,277,78,62,1039,54
 Amalie Dideriksen,1996-05-24,Denmark,Kastrup,Boels - Dolmans Cycling Team,62,1.75,624,54,215,1026,92
 Emily Herfoss,1994-07-24,Australia,NA,Roxsolt Attaquer,NA,NA,136,15,68,136,0
-Barbara Guarischi,1990-10-02,Italy,Ponte San Pietro,Movistar Team,57,1.67,513,161,375,2788,483
-Pauliena Rooijakkers,1993-05-12,Netherlands,Venray,CCC - Liv,58,1.71,142,99,178,204,434
-Tatiana Guderzo,1984-08-22,Italy,Marostica,Alé BTC Ljubljana,54,1.6,1415,746,1949,1688,3104
 Tayler Wiles,1989-07-20,United,Murray,Trek-Segafredo Women,NA,NA,137,629,2226,777,872
-Urša Pintar,1985-10-03,Slovenia,Ljubljana,Alé BTC Ljubljana,56,1.69,188,27,94,228,405
-Anna Plichta,1992-02-10,Poland,Wadowice,Trek-Segafredo Women,60,1.76,49,135,555,136,363
 Olga Shekel,1994-05-28,Ukraine,NA,Astana Womens Team,58,1.68,227,16,326,436,141
 Eugénie Duval,1993-05-03,France,Évreux,FDJ Nouvelle Aquitaine Futuroscope,53,1.62,148,121,121,810,92
-Peta Mullens,1988-03-08,Australia,NA,Roxsolt Attaquer,NA,NA,94,64,114,695,327
 Tatsiana Sharakova,1984-07-31,Belarus,Orsha,Minsk Cycling Club,52,1.6,231,120,320,493,274
 Diana Klimova,1996-10-08,Russia,Tyumen,Cogeas - Mettler Pro Cycling Team,NA,NA,91,28,1,367,0
 Jeidi Pradera,1998-02-17,Cuba,NA,NA,NA,NA,48,0,82,78,0
-Elisa Balsamo,1998-02-27,Italy,Cuneo,Valcar - Travel & Service,53,1.65,837,41,224,1040,162
-Katia Ragusa,1997-05-19,Italy,Schio,Astana Womens Team,NA,NA,12,58,3,246,114
-Marlen Reusser,1991-09-20,Switzerland,NA,Équipe Paule Ka,NA,1.8,37,62,528,157,42
 Teniel Campbell,1997-09-23,Trinidad,Hardbargain,Valcar - Travel & Service,63,1.83,144,96,30,511,0
 Sheyla Gutiérrez,1994-01-01,Spain,Varea,Movistar Team,60,1.69,605,123,106,1058,693
-Emilia Fahlin,1988-10-24,Sweden,Örebro,FDJ Nouvelle Aquitaine Futuroscope,55,1.76,629,304,2032,1535,586
 Andrea Ramirez,1999-09-25,Mexico,NA,Agolico,NA,NA,97,143,275,341,121
-Erica Magnaldi,1992-08-24,Italy,NA,Ceratizit-WNT Pro Cycling,NA,NA,66,244,115,97,851
-Ane Santesteban,1990-12-12,Spain,Errenteria,Ceratizit-WNT Pro Cycling,48,1.6,240,285,236,746,1464
 Franziska Koch,2000-07-13,Germany,Mettmann,Team Sunweb,NA,NA,15,74,154,221,22
-Maria Giulia Confalonieri,1993-03-30,Italy,Giussano,Ceratizit-WNT Pro Cycling,56,1.68,867,150,472,2135,198
-Juliette Labous,1998-11-04,France,Roche-lez-Beaupré,Team Sunweb,NA,1.65,32,236,482,174,316
-Karol-Ann Canuel,1988-04-18,Canada,Amos,Boels - Dolmans Cycling Team,51,1.63,308,332,1462,411,969
-Demi Vollering,1996-11-15,Netherlands,Pijnacker,Parkhotel Valkenburg,NA,NA,242,170,254,486,515
-Marta Cavalli,1998-03-18,Italy,NA,Valcar - Travel & Service,NA,NA,179,91,58,348,78
-Chantal van den Broek-Blaak,1989-10-22,Netherlands,Rotterdam,Boels - Dolmans Cycling Team,64,1.76,2283,305,1050,1709,1066
-Lucy Kennedy,1988-07-11,Australia,Brisbane,Mitchelton-Scott,NA,1.83,273,254,78,421,582
 Jaime Gunning,1998-08-10,Australia,NA,NA,NA,NA,0,92,0,144,96
 Riejanne Markus,1994-09-01,Netherlands,Diemen,CCC - Liv,61,1.81,138,200,662,471,326
 Hanna Tserakh,1998-09-07,Belarus,Minsk,Minsk Cycling Club,NA,NA,165,26,69,440,37
-Alison Jackson,1988-12-14,Canada,Vermilion,Team Sunweb,NA,NA,334,246,454,1236,600
-Emma Cecilie Norsgaard,1999-07-26,Denmark,NA,Équipe Paule Ka,NA,1.72,99,4,154,257,0
 Pernille Mathiesen,1997-10-05,Denmark,Holstebro,Team Sunweb,71,1.84,43,146,639,76,113
-Audrey Cordon-Ragot,1989-09-22,France,Pontivy,Trek-Segafredo Women,60,1.7,556,368,790,1043,834
 Letizia Paternoster,1999-07-22,Italy,Cles,Trek-Segafredo Women,53,1.64,177,142,410,706,51
-Lotte Kopecky,1995-11-10,Belgium,Rumst,Lotto Soudal Ladies,66,1.7,778,210,529,1576,328
-Elizabeth Banks,1990-11-07,Great,Malvern,Équipe Paule Ka,NA,1.7,136,106,150,501,167
 Jiajun Sun,1996-07-29,China,NA,NA,NA,NA,157,22,2,286,0
-Rasa Leleivytė,1988-07-22,Lithuania,Vilnius,Aromitalia Vaiano,NA,NA,1059,137,232,2012,1460
-Chiara Consonni,1999-06-24,Italy,NA,Valcar - Travel & Service,NA,NA,187,32,34,494,0
 Ella Harris,1998-07-18,New,NA,Canyon SRAM Racing,NA,NA,34,94,0,161,190
-Soraya Paladin,1993-05-04,Italy,Treviso,CCC - Liv,59,1.66,229,437,145,1259,1069
-Eugenia Bujak,1989-06-25,Slovenia,Lentvaris,Alé BTC Ljubljana,63,1.76,758,501,1570,1822,761
 Clara Koppenburg,1995-08-03,Germany,NA,Équipe Paule Ka,NA,1.7,51,298,630,177,384
-Cecilie Uttrup Ludwig,1995-08-23,Denmark,Frederiksberg,FDJ Nouvelle Aquitaine Futuroscope,NA,1.68,660,316,731,673,450
 Brodie Chapman,1991-04-09,Australia,NA,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,160,298,196,395,576
-Vita Heine,1984-11-21,Norway,Riga,Hitec Products,NA,1.76,188,184,444,535,326
-Floortje Mackaij,1995-10-18,Netherlands,Woerden,Team Sunweb,NA,1.71,568,402,730,1503,410
-Amy Pieters,1991-06-01,Netherlands,Haarlem,Boels - Dolmans Cycling Team,58,1.64,1513,908,2325,3285,1479
-Ashleigh Moolman,1985-12-09,South,Pretoria,CCC - Liv,49,1.63,1985,1255,2402,2342,2988
 Mieke Kröger,1993-07-18,Germany,Bielefeld,Hitec Products,NA,NA,10,108,1873,379,67
-Katarzyna Niewiadoma,1994-09-29,Poland,Limanowa,Canyon SRAM Racing,49,1.65,1729,1365,837,1459,2244
-Mavi García,1984-01-02,Spain,Marratxi,Alé BTC Ljubljana,56,1.72,342,338,95,460,1223
 Leah Thomas,1989-05-30,United,Santa Clara,Équipe Paule Ka,NA,1.65,104,537,1352,717,417
 Lisa Klein,1996-07-15,Germany,Saarbrücken,Canyon SRAM Racing,61,1.69,161,500,2226,717,69
-Lauren Stephens,1986-12-28,United,Mesquite,Team TIBCO - SVB,NA,NA,279,549,1873,919,1280
-Leah Kirchmann,1990-06-30,Canada,Winnipeg,Team Sunweb,59,1.67,1444,784,1343,2277,790
-Elizabeth Deignan,1988-12-18,Great,Otley,Trek-Segafredo Women,57,1.68,3578,659,1685,3396,1962
-Coryn Rivera,1992-08-26,United,Garden Grove,Team Sunweb,NA,1.55,1145,690,543,2993,717
-Liane Lippert,1998-01-13,Germany,Friedrichshafen,Team Sunweb,56,1.68,170,374,458,306,522
 Lucinda Brand,1989-07-02,Netherlands,Dordrecht,Trek-Segafredo Women,57,1.68,1175,907,2445,3136,1778
-Ruth Winder,1993-07-09,United,Keighley,Trek-Segafredo Women,59,1.63,182,562,820,1189,861
-Arlenis Sierra,1992-12-07,Cuba,Manzanillo,Astana Womens Team,57,1.62,1151,455,1116,2098,1230
-Amanda Spratt,1987-09-17,Australia,Penrith,Mitchelton-Scott,55,1.61,1151,1210,1182,1670,1998
-Chloe Dygert-Owen,1997-01-01,United,NA,NA,66,1.76,165,218,742,577,397
-Elisa Longo Borghini,1991-12-10,Italy,Ornavasso,Trek-Segafredo Women,59,1.7,2691,1274,1804,2317,2478
-Chloe Hosking,1990-10-01,Australia,Bendigo,Rally Cycling Women,60,1.61,2113,808,404,5556,645
-Lisa Brennauer,1988-06-08,Germany,Kempten,Ceratizit-WNT Pro Cycling,63,1.68,971,1148,5290,3523,1266
-Christine Majerus,1987-02-25,Luxembourg,Luxembourg,Boels - Dolmans Cycling Team,56,1.73,1567,1113,1595,3811,1389
-Lorena Wiebes,1999-03-17,Netherlands,Mijdrecht,Team Sunweb,60,1.71,1226,345,159,2504,81
-Anna van der Breggen,1990-04-18,Netherlands,Zwolle,Boels - Dolmans Cycling Team,56,1.67,3550,2014,4664,2218,2766
 Marta Bastianelli,1987-04-30,Italy,Velletri,Alé BTC Ljubljana,58,1.66,2675,179,200,4818,940
-Marianne Vos,1987-05-13,Netherlands,'s-Hertogenbosch,CCC - Liv,58,1.68,8556,3318,6432,13398,5800
-Annemiek van Vleuten,1982-10-08,Netherlands,Vleuten,Mitchelton-Scott,62,1.68,3930,1816,6301,4527,2763
 Nicole Steigenga,1998-01-27,Netherlands,Sneek,Doltcini - Van Eyck Sport,NA,NA,5,0,49,155,3
-Tereza Medveďová,1996-03-27,Slovakia,Brezno,WCC Team,NA,NA,44,8,142,4,39
-Eider Merino,1994-08-02,Spain,Balmaseda,Movistar Team,40,1.54,99,230,52,188,1048
-Anouska Koster,1993-08-20,Netherlands,Zwaagwesteinde,Parkhotel Valkenburg,57,1.65,252,209,920,1020,544
 Anna Trevisi,1992-05-08,Italy,Brugneto,Alé BTC Ljubljana,54,1.65,159,16,58,743,112
-Sarah Roy,1986-02-27,Australia,Sydney,Mitchelton-Scott,66,1.76,443,149,517,1573,107
 Taisia Churenkova,2001-08-25,Russia,NA,NA,NA,NA,14,0,0,30,0
-Elise Chabbey,1993-04-24,Switzerland,NA,Équipe Paule Ka,NA,1.65,7,24,14,105,76
-Kristen Faulkner,1992-12-18,United,NA,Team TIBCO - SVB,NA,NA,0,0,0,82,0
 Urška Žigart,1996-12-04,Slovenia,Slovenska Bistrica,Alé BTC Ljubljana,NA,NA,15,18,4,21,118
 Karlijn Swinkels,1998-10-28,Netherlands,Handel,Parkhotel Valkenburg,NA,1.73,16,6,274,230,17
-Pauline Allin,1995-05-02,France,NA,Team Arkéa,NA,NA,0,0,0,5,2
-Galina Chernyshova,1993-11-21,Russia,NA,Sestroretsk,NA,NA,50,0,28,174,128
-Elena Franchi,1996-08-26,Italy,NA,Eurotarget - Bianchi - Vittoria,NA,NA,24,30,28,170,70
 Katarzyna Wilkos,1993-08-10,Poland,NA,NA,NA,NA,66,12,168,543,253
 Eva Buurman,1994-09-07,Netherlands,NA,Boels - Dolmans Cycling Team,NA,NA,112,114,24,710,159
-Roxane Fournier,1991-11-07,France,Soisy-sous-Montmorency,Chevalmeire Cycling Team,60,1.66,807,288,142,3060,534
-Gladys Verhulst,1997-01-02,France,Le-Grand-Quevilly,Team Arkéa,NA,NA,76,0,0,146,0
-Alice Barnes,1995-07-17,Great,Northampton,Canyon SRAM Racing,59,1.62,172,151,564,833,16
 Yelyzaveta Oshurkova,1991-06-19,Russia,NA,NA,55,1.62,79,92,191,319,202
 Amber van der Hulst,1999-09-21,Netherlands,NA,Parkhotel Valkenburg,NA,NA,31,0,76,115,4
-Alicia González,1995-05-27,Spain,Viella,Movistar Team,51,1.6,56,21,69,500,72
-Kristabel Doebel-Hickok,1989-04-28,United,Marina del Rey,Rally Cycling Women,NA,NA,98,228,244,329,1096
-Aude Biannic,1991-03-27,France,Landerneau,Movistar Team,64,1.75,351,211,1353,827,612
 Leigh Ann Ganzar,1989-09-08,United,NA,Rally Cycling Women,NA,NA,80,3,40,308,116
-Lauren Kitchen,1990-11-21,Australia,Armidale,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,463,128,327,1200,457
 Anastasia Pecherskikh,2002-01-28,Russia,NA,NA,NA,NA,24,0,0,59,0
-Stine Borgli,1990-07-04,Norway,Sandnes,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,73,124,91,376,289
-Debora Silvestri,1998-05-08,Italy,NA,Top Girls Fassa Bortolo,NA,NA,26,0,30,45,0
-Kathrin Schweinberger,1996-10-29,Austria,NA,Doltcini - Van Eyck Sport,NA,NA,193,36,98,516,42
-Hannah Barnes,1993-05-04,Great,Tunbridge Wells,Canyon SRAM Racing,82,1.7,310,184,639,1373,327
-Jolien d'Hoore,1990-03-14,Belgium,Ghent,Boels - Dolmans Cycling Team,63,1.75,2101,479,1094,4992,162
 Kata Blanka Vas,2001-09-03,Hungary,NA,Doltcini - Van Eyck Sport,51,1.63,34,0,0,65,0
-Victorie Guilman,1996-03-25,France,Angoulême,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,28,20,0,133,157
-Polina Kirillova,1997-10-08,Russia,NA,Sestroretsk,NA,NA,73,22,89,223,32
-Katrine Aalerud,1994-12-04,Norway,Vestby,Movistar Team,54,1.68,28,102,151,79,460
-Simona Frapporti,1988-07-14,Italy,Gavardo,Bepink,63,1.77,111,79,111,1134,187
-Mariia Miliaeva,2001-07-16,Russia,NA,Cogeas - Mettler Pro Cycling Team,NA,NA,79,0,0,171,0
-Daniela Atehortua,1999-03-30,Colombia,Santuario,NA,NA,NA,18,15,12,96,1
-Ilaria Sanguineti,1994-04-15,Italy,NA,Valcar - Travel & Service,NA,NA,201,90,65,998,247
 Laura Milena Toconas,2001-01-30,Colombia,NA,NA,NA,NA,40,0,0,6,0
 Inge van der Heijden,1999-08-12,Netherlands,Schaijk,Ciclismo Mondial,50,1.65,46,0,0,84,24
 Carolina Upegui,1989-03-16,Colombia,NA,NA,NA,NA,41,0,0,43,0
-Charlotte Kool,1999-05-06,Netherlands,NA,NXTG Racing,NA,NA,76,0,14,158,0
-Tatiana Guderzo,1984-08-22,Italy,Marostica,Alé BTC Ljubljana,54,1.6,1415,750,1949,1694,3104
-Marlen Reusser,1991-09-20,Switzerland,NA,Équipe Paule Ka,NA,1.8,37,62,528,159,42
-Aigul Gareeva,2001-08-22,Russia,NA,Cogeas - Mettler Pro Cycling Team,NA,NA,51,0,0,72,0
-Erica Magnaldi,1992-08-24,Italy,NA,Ceratizit-WNT Pro Cycling,NA,NA,66,254,115,121,851
-Elisa Balsamo,1998-02-27,Italy,Cuneo,Valcar - Travel & Service,53,1.65,837,41,224,1046,162
-Sandra Levenez,1979-07-05,France,NA,Team Arkéa,NA,NA,30,20,11,54,5
-Elena Cecchini,1992-05-25,Italy,Udine,Canyon SRAM Racing,52,1.68,1190,427,571,2459,1237
-Margarita Syradoeva,1995-04-06,Russia,NA,Sestroretsk,NA,NA,95,8,25,243,16
-Susanne Andersen,1998-07-23,Norway,Stavanger,Team Sunweb,55,1.64,288,22,158,894,66
 Paula Andrea Patiño,1997-03-29,Colombia,La Ceja,Movistar Team,47,1.55,47,61,32,169,331
 Yara Kastelijn,1997-08-09,Netherlands,NA,Ciclismo Mondial,51,1.66,38,24,17,99,61
-Anna Kiesenhofer,1991-02-14,Austria,NA,NA,NA,NA,10,62,44,8,110
-Urša Pintar,1985-10-03,Slovenia,Ljubljana,Alé BTC Ljubljana,56,1.69,188,27,94,240,405
 Tamara Dronova-Balabolina,1993-08-13,Russia,NA,NA,NA,NA,64,0,0,96,0
-Amy Pieters,1991-06-01,Netherlands,Haarlem,Boels - Dolmans Cycling Team,58,1.64,1513,908,2325,3345,1479
-Barbara Guarischi,1990-10-02,Italy,Ponte San Pietro,Movistar Team,57,1.67,513,161,375,2826,483
-Anna Plichta,1992-02-10,Poland,Wadowice,Trek-Segafredo Women,60,1.76,61,135,555,156,363
-Juliette Labous,1998-11-04,France,Roche-lez-Beaupré,Team Sunweb,NA,1.65,32,239,482,175,316
-Ellen van Dijk,1987-02-11,Netherlands,Harmelen,Trek-Segafredo Women,71,1.82,1955,1775,6878,3624,1407
-Ane Santesteban,1990-12-12,Spain,Errenteria,Ceratizit-WNT Pro Cycling,48,1.6,240,340,236,804,1464
-Floortje Mackaij,1995-10-18,Netherlands,Woerden,Team Sunweb,NA,1.71,568,403,730,1519,410
-Niamh Fisher-Black,2000-08-12,New,NA,Équipe Paule Ka,NA,1.6,56,6,0,124,44
-Olha Kulynych,2000-01-01,Ukraine,NA,Ciclotel,NA,NA,90,0,2,132,17
-Alison Jackson,1988-12-14,Canada,Vermilion,Team Sunweb,NA,NA,334,246,454,1278,600
-Katia Ragusa,1997-05-19,Italy,Schio,Astana Womens Team,NA,NA,12,78,3,258,114
-Marta Cavalli,1998-03-18,Italy,NA,Valcar - Travel & Service,NA,NA,179,115,58,400,78
-Évita Muzic,1999-05-26,France,Lons-le-Saunier,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,49,64,0,64,258
-Anastasiia Chursina,1995-04-07,Russia,NA,Alé BTC Ljubljana,54,1.69,270,286,424,412,420
-Mikayla Harvey,1998-09-07,New,NA,Équipe Paule Ka,NA,1.71,33,70,136,153,87
-Iuliia Galimullina,2001-09-20,Russia,NA,Cogeas - Mettler Pro Cycling Team,NA,NA,110,0,0,151,0
-Chantal van den Broek-Blaak,1989-10-22,Netherlands,Rotterdam,Boels - Dolmans Cycling Team,64,1.76,2283,317,1050,1719,1066
-Eugenia Bujak,1989-06-25,Slovenia,Lentvaris,Alé BTC Ljubljana,63,1.76,758,501,1570,1897,761
-Soraya Paladin,1993-05-04,Italy,Treviso,CCC - Liv,59,1.66,229,451,145,1309,1069
-Chiara Consonni,1999-06-24,Italy,NA,Valcar - Travel & Service,NA,NA,217,32,34,538,0
-Mariia Novolodskaia,1999-07-28,Russia,NA,Cogeas - Mettler Pro Cycling Team,57,1.66,200,122,456,518,161
-Audrey Cordon-Ragot,1989-09-22,France,Pontivy,Trek-Segafredo Women,60,1.7,556,368,790,1103,834
-Valeriya Kononenko,1990-05-14,Ukraine,NA,Ciclotel,NA,NA,217,69,92,447,2
-Coryn Rivera,1992-08-26,United,Garden Grove,Team Sunweb,NA,1.55,1145,690,543,3101,717
-Lorena Wiebes,1999-03-17,Netherlands,Mijdrecht,Team Sunweb,60,1.71,1266,345,159,2564,81
-Elizabeth Banks,1990-11-07,Great,Malvern,Équipe Paule Ka,NA,1.7,136,138,150,607,167
-Ashleigh Moolman,1985-12-09,South,Pretoria,CCC - Liv,49,1.63,1985,1315,2402,2438,2988
-Lotte Kopecky,1995-11-10,Belgium,Rumst,Lotto Soudal Ladies,66,1.7,798,210,529,1859,328
-Katarzyna Niewiadoma,1994-09-29,Poland,Limanowa,Canyon SRAM Racing,49,1.65,1729,1475,837,1653,2244
-Chloe Dygert-Owen,1997-01-01,United,Brownsburg,NA,66,1.76,165,218,742,577,397
-Arlenis Sierra,1992-12-07,Cuba,Manzanillo,Astana Womens Team,57,1.62,1151,455,1116,2136,1230
-Elizabeth Deignan,1988-12-18,Great,Otley,Trek-Segafredo Women,57,1.68,3578,659,1685,3531,1962
-Cecilie Uttrup Ludwig,1995-08-23,Denmark,Frederiksberg,FDJ Nouvelle Aquitaine Futuroscope,NA,1.68,660,396,731,826,450
-Lauren Stephens,1986-12-28,United,Mesquite,Team TIBCO - SVB,NA,NA,279,629,1873,1021,1280
-Mavi García,1984-01-02,Spain,Marratxi,Alé BTC Ljubljana,56,1.72,342,439,95,606,1223
-Liane Lippert,1998-01-13,Germany,Friedrichshafen,Team Sunweb,56,1.68,170,402,458,408,522
-Lisa Brennauer,1988-06-08,Germany,Kempten,Ceratizit-WNT Pro Cycling,63,1.68,971,1148,5290,3563,1266
-Amanda Spratt,1987-09-17,Australia,Penrith,Mitchelton-Scott,55,1.61,1151,1210,1182,1686,1998
-Chloe Hosking,1990-10-01,Australia,Bendigo,Rally Cycling Women,60,1.61,2153,808,404,5742,645
-Marianne Vos,1987-05-13,Netherlands,'s-Hertogenbosch,CCC - Liv,58,1.68,8556,3354,6432,13720,5800
-Elisa Longo Borghini,1991-12-10,Italy,Ornavasso,Trek-Segafredo Women,59,1.7,2691,1364,1804,2445,2478
-Anna van der Breggen,1990-04-18,Netherlands,Zwolle,Boels - Dolmans Cycling Team,56,1.67,3550,2164,4664,2374,2766
-Annemiek van Vleuten,1982-10-08,Netherlands,Vleuten,Mitchelton-Scott,62,1.68,3930,1816,6301,4727,2763
 Manuela Muresan,NA,Romania,NA,NA,NA,NA,10,0,0,0,0
 Nathalie Eklund,1992-01-08,Sweden,NA,NA,NA,1.66,15,0,0,26,0
 Jenna Merrick,2000-02-25,New,NA,Doltcini - Van Eyck Sport,NA,NA,30,24,0,76,36
@@ -314,88 +132,118 @@ Maria Catalina Gomez,1995-05-25,Colombia,NA,NA,NA,NA,13,0,5,26,0
 Ivana Vilim,1999-10-23,Serbia,Sombor,NA,53,1.66,17,0,2,0,0
 Siti Nur Adibah Akma Mohd Fuad,1999-03-25,Malaysia,NA,NA,NA,NA,10,0,0,0,0
 Minna-Maria Kangas,1983-02-05,Finland,Oulu,NA,NA,NA,30,12,240,33,58
-Špela Kern,1990-02-24,Slovenia,NA,Lviv Cycling Team women,NA,NA,62,5,14,78,106
-Aurelie Halbwachs,1986-08-24,Mauritius,Curepipe,NA,62,1.67,121,0,48,23,79
 Jarmila Machačová,1986-01-09,Czech,NA,NA,NA,NA,84,6,310,143,148
-Pauline Allin,1995-05-02,France,Saintes,Team Arkéa,58,1.68,0,0,0,5,2
-Elise Chabbey,1993-04-24,Switzerland,NA,Équipe Paule Ka,NA,1.65,12,24,14,105,76
 Chanpeng Nontasin,1984-10-09,Thailand,NA,Thailand Women's Cycling Team,57,1.65,45,42,6,75,69
-Alice Barnes,1995-07-17,Great,Northampton,Canyon SRAM Racing,59,1.62,172,151,584,833,16
-Anna Plichta,1992-02-10,Poland,Wadowice,Trek-Segafredo Women,60,1.76,61,135,593,156,363
-Tatiana Guderzo,1984-08-22,Italy,Marostica,Alé BTC Ljubljana,54,1.6,1393,750,1949,1694,3104
-Aude Biannic,1991-03-27,France,Landerneau,Movistar Team,64,1.75,351,206,1365,831,612
-Silvia Zanardi,2000-03-03,Italy,NA,Bepink,NA,NA,19,0,0,70,0
-Amber Neben,1975-02-18,United,Irvine,Cogeas - Mettler Pro Cycling Team,48,1.6,887,1401,5636,1334,2765
-Kristen Faulkner,1992-12-18,United,Homer,Team TIBCO - SVB,NA,NA,5,0,0,10,0
-Alicia González,1995-05-27,Spain,Viella,Movistar Team,51,1.6,56,16,69,500,72
 Kulacha Chairin,1988-11-16,Thailand,NA,Team Illuminate,NA,NA,0,20,0,27,0
 Thiangkaew Apinya,1995-03-09,Thailand,NA,NA,NA,NA,3,16,0,48,1
-Lisa Nordén,1984-11-24,Sweden,NA,NA,59,1.76,17,0,48,0,0
-Coryn Rivera,1992-08-26,United,Garden Grove,Team Sunweb,NA,1.55,1145,690,543,3102,717
-Alena Amialiusik,1989-02-06,Belarus,Babruysk,Canyon SRAM Racing,53,1.69,1296,648,2157,1164,3261
-Sabrina Stultiens,1993-07-08,Netherlands,Helmond,CCC - Liv,58,1.74,227,179,318,400,507
-Karol-Ann Canuel,1988-04-18,Canada,Amos,Boels - Dolmans Cycling Team,51,1.63,308,332,1476,411,969
 Phetdarin Somrat,1995-06-06,Thailand,NA,Thailand Women's Cycling Team,56,1.69,0,122,2,133,161
-Simona Frapporti,1988-07-14,Italy,Gavardo,Bepink,63,1.77,111,74,111,1134,187
-Rachel Neylan,1982-03-09,Australia,Sydney,Cronos Casa Dorada Women Cycling,52,1.69,425,199,761,537,738
-Elisa Balsamo,1998-02-27,Italy,Cuneo,Valcar - Travel & Service,53,1.65,825,41,224,1052,162
-Vittoria Bussi,1987-03-19,Italy,Rome,NA,NA,NA,0,0,171,12,2
-Erica Magnaldi,1992-08-24,Italy,NA,Ceratizit-WNT Pro Cycling,NA,NA,52,254,115,121,851
-Ilaria Sanguineti,1994-04-15,Italy,NA,Valcar - Travel & Service,NA,NA,204,90,65,998,247
-Pauliena Rooijakkers,1993-05-12,Netherlands,Venray,CCC - Liv,58,1.71,118,99,178,204,434
-Katrine Aalerud,1994-12-04,Norway,Vestby,Movistar Team,54,1.68,44,102,151,79,460
-Hannah Barnes,1993-05-04,Great,Tunbridge Wells,Canyon SRAM Racing,NA,1.7,330,184,639,1373,327
-Urša Pintar,1985-10-03,Slovenia,Ljubljana,Alé BTC Ljubljana,56,1.69,175,27,94,240,405
-Soraya Paladin,1993-05-04,Italy,Treviso,CCC - Liv,59,1.66,210,451,145,1309,1069
-Lucy van der Haar,1994-09-20,Great,Leicester,Hitec Products,NA,NA,328,189,50,1377,60
-Aigul Gareeva,2001-08-22,Russia,NA,Cogeas - Mettler Pro Cycling Team,NA,NA,51,0,4,73,0
 Chaniporn Batriya,1999-08-12,Thailand,NA,Thailand Women's Cycling Team,NA,NA,5,32,0,150,0
-Vita Heine,1984-11-21,Norway,Riga,Hitec Products,NA,1.76,188,184,444,541,326
-Anna Kiesenhofer,1991-02-14,Austria,NA,NA,NA,NA,10,62,66,8,110
-Maria Giulia Confalonieri,1993-03-30,Italy,Giussano,Ceratizit-WNT Pro Cycling,56,1.68,857,150,472,2153,198
-Peta Mullens,1988-03-08,Australia,NA,Roxsolt Attaquer,NA,NA,94,48,114,695,327
-Sarah Roy,1986-02-27,Australia,Sydney,Mitchelton-Scott,66,1.76,498,144,523,1573,107
-Christine Majerus,1987-02-25,Luxembourg,Luxembourg,Boels - Dolmans Cycling Team,56,1.73,1567,1108,1595,3814,1389
-Barbara Guarischi,1990-10-02,Italy,Ponte San Pietro,Movistar Team,57,1.67,513,156,375,2830,483
-Juliette Labous,1998-11-04,France,Roche-lez-Beaupré,Team Sunweb,NA,1.65,42,239,508,175,316
-Emilia Fahlin,1988-10-24,Sweden,Örebro,FDJ Nouvelle Aquitaine Futuroscope,55,1.76,656,304,2032,1560,586
-Floortje Mackaij,1995-10-18,Netherlands,Woerden,Team Sunweb,NA,1.71,612,375,732,1565,410
-Eugenia Bujak,1989-06-25,Slovenia,Lentvaris,Alé BTC Ljubljana,63,1.76,788,501,1612,1897,761
-Évita Muzic,1999-05-26,France,Lons-le-Saunier,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,31,64,0,64,258
-Marta Cavalli,1998-03-18,Italy,NA,Valcar - Travel & Service,NA,NA,212,115,58,400,78
 Supaksorn Nuntana,1989-12-08,Thailand,NA,Thailand Women's Cycling Team,55,1.59,3,90,3,382,120
-Katia Ragusa,1997-05-19,Italy,Schio,Astana Womens Team,NA,NA,12,78,3,274,114
-Lucy Kennedy,1988-07-11,Australia,Brisbane,Mitchelton-Scott,NA,1.83,277,254,78,421,582
+Aigul Gareeva,2001-08-22,NA,NA,Cogeas - Mettler Pro Cycling Team,NA,NA,51,0,4,73,0
+Alena Amialiusik,1989-02-06,Belarus,Babruysk,Canyon SRAM Racing,53,1.69,1296,648,2157,1164,3261
+Alice Barnes,1995-07-17,Great Britain,Northampton,Canyon SRAM Racing,59,1.62,192,151,584,833,16
+Alicia González,1995-05-27,Spain,Viella,Movistar Team,51,1.6,56,16,69,500,72
+Alison Jackson,1988-12-14,NA,Vermilion,Team Sunweb,NA,NA,343,246,454,1278,600
+Amanda Spratt,1987-09-17,Australia,Penrith,Mitchelton-Scott,55,1.61,1151,1210,1182,1686,1998
+Amber Neben,1975-02-18,United States,Irvine,Cogeas - Mettler Pro Cycling Team,48,1.6,887,1401,5636,1334,2765
+Amy Pieters,1991-06-01,Netherlands,Haarlem,Boels - Dolmans Cycling Team,58,1.64,1621,826,2343,3350,1479
 Anastasiia Chursina,1995-04-07,Russia,NA,Alé BTC Ljubljana,54,1.69,270,286,424,416,420
-Rasa Leleivytė,1988-07-22,Lithuania,Vilnius,Aromitalia Vaiano,NA,NA,1068,137,232,2032,1460
-Niamh Fisher-Black,2000-08-12,New,NA,Équipe Paule Ka,NA,1.6,82,6,0,124,44
-Leah Kirchmann,1990-06-30,Canada,Winnipeg,Team Sunweb,59,1.67,1444,784,1367,2277,790
-Ashleigh Moolman,1985-12-09,South,Pretoria,CCC - Liv,49,1.63,2005,1283,2404,2441,2988
-Emma Cecilie Norsgaard,1999-07-26,Denmark,NA,Équipe Paule Ka,NA,1.72,103,4,244,257,0
-Jolien d'Hoore,1990-03-14,Belgium,Ghent,Boels - Dolmans Cycling Team,63,1.75,2172,479,1094,4992,162
-Mikayla Harvey,1998-09-07,New,NA,Équipe Paule Ka,NA,1.71,48,70,154,153,87
-Audrey Cordon-Ragot,1989-09-22,France,Pontivy,Trek-Segafredo Women,60,1.7,596,362,840,1103,834
-Amy Pieters,1991-06-01,Netherlands,Haarlem,Boels - Dolmans Cycling Team,58,1.64,1617,826,2343,3350,1479
-Demi Vollering,1996-11-15,Netherlands,Pijnacker,Parkhotel Valkenburg,NA,NA,309,170,254,486,515
-Jutatip Maneephan,1988-07-08,Thailand,Roi Et,Alé BTC Ljubljana,59,1.57,227,512,3,1725,93
-Valeriya Kononenko,1990-05-14,Ukraine,Donetsk,Ciclotel,68,1.75,217,69,98,447,2
-Ellen van Dijk,1987-02-11,Netherlands,Harmelen,Trek-Segafredo Women,71,1.82,2000,1659,7078,3630,1407
-Elizabeth Banks,1990-11-07,Great,Malvern,Équipe Paule Ka,NA,1.7,136,138,184,607,167
-Marlen Reusser,1991-09-20,Switzerland,Jegenstorf,Équipe Paule Ka,70,1.8,122,62,708,159,42
-Lorena Wiebes,1999-03-17,Netherlands,Mijdrecht,Team Sunweb,60,1.71,1273,345,159,2564,81
-Arlenis Sierra,1992-12-07,Cuba,Manzanillo,Astana Womens Team,57,1.62,1151,455,1128,2142,1230
-Grace Brown,1992-07-07,Australia,Camperdown,Mitchelton-Scott,NA,1.68,215,29,192,187,258
-Lisa Brennauer,1988-06-08,Germany,Kempten,Ceratizit-WNT Pro Cycling,63,1.68,1121,1148,5430,3563,1266
-Ruth Winder,1993-07-09,United,Keighley,Trek-Segafredo Women,59,1.63,186,562,820,1189,861
-Lotte Kopecky,1995-11-10,Belgium,Rumst,Lotto Soudal Ladies,66,1.7,932,210,529,1894,328
-Chantal van den Broek-Blaak,1989-10-22,Netherlands,Rotterdam,Boels - Dolmans Cycling Team,64,1.76,2433,317,1050,1719,1066
-Mavi García,1984-01-02,Spain,Marratxi,Alé BTC Ljubljana,56,1.72,357,439,95,620,1223
-Katarzyna Niewiadoma,1994-09-29,Poland,Limanowa,Canyon SRAM Racing,49,1.65,1814,1467,837,1653,2244
-Lauren Stephens,1986-12-28,United,Mesquite,Team TIBCO - SVB,NA,NA,377,629,1943,1033,1280
-Cecilie Uttrup Ludwig,1995-08-23,Denmark,Frederiksberg,FDJ Nouvelle Aquitaine Futuroscope,NA,1.68,785,396,731,826,450
-Marianne Vos,1987-05-13,Netherlands,'s-Hertogenbosch,CCC - Liv,58,1.68,8725,3220,6472,13755,5800
-Liane Lippert,1998-01-13,Germany,Friedrichshafen,Team Sunweb,56,1.68,364,402,458,468,522
-Elizabeth Deignan,1988-12-18,Great,Otley,Trek-Segafredo Women,57,1.68,3828,659,1715,3531,1962
-Elisa Longo Borghini,1991-12-10,Italy,Ornavasso,Trek-Segafredo Women,59,1.7,2874,1324,1808,2449,2478
-Annemiek van Vleuten,1982-10-08,Netherlands,Vleuten,Mitchelton-Scott,62,1.68,4103,1816,6301,4727,2763
+Ane Santesteban,1990-12-12,Spain,Errenteria,Ceratizit-WNT Pro Cycling,48,1.6,240,340,236,804,1464
+Anna Kiesenhofer,1991-02-14,NA,NA,NA,NA,NA,10,62,66,8,110
+Anna Plichta,1992-02-10,Poland,Wadowice,Trek-Segafredo Women,60,1.76,61,135,593,156,363
 Anna van der Breggen,1990-04-18,Netherlands,Zwolle,Boels - Dolmans Cycling Team,56,1.67,3812,1994,4894,2394,2766
+Annemiek van Vleuten,1982-10-08,Netherlands,Vleuten,Mitchelton-Scott,62,1.68,4103,1816,6301,4727,2763
+Anouska Koster,1993-08-20,Netherlands,Zwaagwesteinde,Parkhotel Valkenburg,57,1.65,252,209,920,1020,544
+Arlenis Sierra,1992-12-07,Cuba,Manzanillo,Astana Womens Team,57,1.62,1151,455,1128,2142,1230
+Ashleigh Moolman,1985-12-09,South Africa,Pretoria,CCC - Liv,49,1.63,2005,1283,2404,2441,2988
+Aude Biannic,1991-03-27,France,Landerneau,Movistar Team,64,1.75,351,206,1365,831,612
+Audrey Cordon-Ragot,1989-09-22,France,Pontivy,Trek-Segafredo Women,60,1.7,596,362,840,1103,834
+Aurelie Halbwachs,1986-08-24,Mauritius,Curepipe,NA,62,1.67,121,0,48,23,79
+Barbara Guarischi,1990-10-02,Italy,Ponte San Pietro,Movistar Team,57,1.67,513,156,375,2830,483
+Cecilie Uttrup Ludwig,1995-08-23,NA,Frederiksberg,FDJ Nouvelle Aquitaine Futuroscope,NA,1.68,785,396,731,826,450
+Chantal van den Broek-Blaak,1989-10-22,Netherlands,Rotterdam,Boels - Dolmans Cycling Team,64,1.76,2433,317,1050,1719,1066
+Charlotte Kool,1999-05-06,NA,NA,NXTG Racing,NA,NA,76,0,14,158,0
+Chiara Consonni,1999-06-24,NA,NA,Valcar - Travel & Service,NA,NA,217,32,34,538,0
+Chloe Dygert,1997-01-01,United States,Brownsburg,NA,66,1.76,165,218,742,577,397
+Chloe Hosking,1990-10-01,Australia,Bendigo,Rally Cycling Women,60,1.61,2153,808,404,5742,645
+Christine Majerus,1987-02-25,Luxembourg,Luxembourg,Boels - Dolmans Cycling Team,56,1.73,1567,1108,1595,3814,1389
+Coryn Rivera,1992-08-26,NA,Garden Grove,Team Sunweb,NA,1.55,1145,690,543,3102,717
+Daniela Atehortua,1999-03-30,NA,Santuario,NA,NA,NA,18,15,12,96,1
+Debora Silvestri,1998-05-08,NA,NA,Top Girls Fassa Bortolo,NA,NA,8,0,30,45,0
+Demi Vollering,1996-11-15,NA,Pijnacker,Parkhotel Valkenburg,NA,NA,309,170,254,486,515
+Eider Merino,1994-08-02,Spain,Balmaseda,Movistar Team,40,1.54,99,230,52,188,1048
+Elena Cecchini,1992-05-25,Italy,Udine,Canyon SRAM Racing,52,1.68,1190,427,571,2459,1237
+Elena Franchi,1996-08-26,NA,NA,Eurotarget - Bianchi - Vittoria,NA,NA,15,30,28,170,70
+Elisa Balsamo,1998-02-27,Italy,Cuneo,Valcar - Travel & Service,53,1.65,828,41,224,1052,162
+Elisa Longo Borghini,1991-12-10,Italy,Ornavasso,Trek-Segafredo Women,59,1.7,2889,1324,1808,2449,2478
+Elise Chabbey,1993-04-24,NA,NA,Équipe Paule Ka,NA,1.65,12,24,14,105,76
+Elizabeth Banks,1990-11-07,NA,Malvern,Équipe Paule Ka,NA,1.7,136,138,184,607,167
+Elizabeth Deignan,1988-12-18,Great Britain,Otley,Trek-Segafredo Women,57,1.68,3828,659,1715,3531,1962
+Ellen van Dijk,1987-02-11,Netherlands,Harmelen,Trek-Segafredo Women,71,1.82,2010,1659,7078,3630,1407
+Emilia Fahlin,1988-10-24,Sweden,Örebro,FDJ Nouvelle Aquitaine Futuroscope,55,1.76,656,304,2032,1560,586
+Emma Cecilie Norsgaard,1999-07-26,NA,NA,Équipe Paule Ka,NA,1.72,103,4,244,257,0
+Erica Magnaldi,1992-08-24,NA,NA,Ceratizit-WNT Pro Cycling,NA,NA,52,254,115,121,851
+Eugenia Bujak,1989-06-25,SloveniaPrevious Nationalities:  Poland (Untill 2017),Lentvaris,Alé BTC Ljubljana,63,1.76,788,501,1612,1897,761
+Évita Muzic,1999-05-26,NA,Lons-le-Saunier,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,31,64,0,64,258
+Floortje Mackaij,1995-10-18,NA,Woerden,Team Sunweb,NA,1.71,612,375,732,1565,410
+Galina Chernyshova,1993-11-21,NA,NA,Sestroretsk,NA,NA,50,0,28,174,128
+Gladys Verhulst,1997-01-02,NA,Le-Grand-Quevilly,Team Arkéa,NA,NA,76,0,0,146,0
+Grace Brown,1992-07-07,NA,Camperdown,Mitchelton-Scott,NA,1.68,215,29,192,187,258
+Hannah Barnes,1993-05-04,NA,Tunbridge Wells,Canyon SRAM Racing,NA,1.7,330,184,639,1373,327
+Ilaria Sanguineti,1994-04-15,NA,NA,Valcar - Travel & Service,NA,NA,204,90,65,998,247
+Iuliia Galimullina,2001-09-20,NA,NA,Cogeas - Mettler Pro Cycling Team,NA,NA,110,0,0,151,0
+Jolien d'Hoore,1990-03-14,Belgium,Ghent,Boels - Dolmans Cycling Team,63,1.75,2172,479,1094,4992,162
+Juliette Labous,1998-11-04,NA,Roche-lez-Beaupré,Team Sunweb,NA,1.65,42,239,508,175,316
+Jutatip Maneephan,1988-07-08,Thailand,Roi Et,Alé BTC Ljubljana,59,1.57,227,512,3,1725,93
+Karol-Ann Canuel,1988-04-18,Canada,Amos,Boels - Dolmans Cycling Team,51,1.63,308,332,1476,411,969
+Katarzyna Niewiadoma,1994-09-29,Poland,Limanowa,Canyon SRAM Racing,49,1.65,1814,1467,837,1653,2244
+Kathrin Schweinberger,1996-10-29,NA,NA,Doltcini - Van Eyck Sport,NA,NA,193,36,98,516,42
+Katia Ragusa,1997-05-19,NA,Schio,Astana Womens Team,NA,NA,12,78,3,274,114
+Katrine Aalerud,1994-12-04,Norway,Vestby,Movistar Team,54,1.68,44,102,151,79,460
+Kristabel Doebel-Hickok,1989-04-28,NA,Marina del Rey,Rally Cycling Women,NA,NA,98,228,244,329,1096
+Kristen Faulkner,1992-12-18,NA,Homer,Team TIBCO - SVB,NA,NA,5,0,0,10,0
+Lauren Kitchen,1990-11-21,NA,Armidale,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,463,128,327,1200,457
+Lauren Stephens,1986-12-28,NA,Mesquite,Team TIBCO - SVB,NA,NA,377,629,1943,1033,1280
+Leah Kirchmann,1990-06-30,Canada,Winnipeg,Team Sunweb,59,1.67,1444,784,1367,2277,790
+Liane Lippert,1998-01-13,Germany,Friedrichshafen,Team Sunweb,56,1.68,364,402,458,468,522
+Lisa Brennauer,1988-06-08,Germany,Kempten,Ceratizit-WNT Pro Cycling,63,1.68,1191,1148,5430,3563,1266
+Lisa Nordén,1984-11-24,Sweden,NA,NA,59,1.76,17,0,48,0,0
+Lorena Wiebes,1999-03-17,Netherlands,Mijdrecht,Team Sunweb,60,1.71,1373,345,159,2564,81
+Lotte Kopecky,1995-11-10,Belgium,Rumst,Lotto Soudal Ladies,66,1.7,972,210,529,1894,328
+Lucy Kennedy,1988-07-11,NA,Brisbane,Mitchelton-Scott,NA,1.83,277,254,78,421,582
+Lucy van der Haar,1994-09-20,NA,Leicester,Hitec Products,NA,NA,328,189,50,1377,60
+Margarita Syradoeva,1995-04-06,NA,NA,Sestroretsk,NA,NA,95,8,25,243,16
+Maria Giulia Confalonieri,1993-03-30,Italy,Giussano,Ceratizit-WNT Pro Cycling,56,1.68,857,150,472,2153,198
+Marianne Vos,1987-05-13,Netherlands,'s-Hertogenbosch,CCC - Liv,58,1.68,8725,3220,6472,13755,5800
+Mariia Miliaeva,2001-07-16,NA,NA,Cogeas - Mettler Pro Cycling Team,NA,NA,79,0,0,171,0
+Mariia Novolodskaia,1999-07-28,Russia,NA,Cogeas - Mettler Pro Cycling Team,57,1.66,200,122,456,518,161
+Marlen Reusser,1991-09-20,Switzerland,Jegenstorf,Équipe Paule Ka,70,1.8,122,62,708,159,42
+Marta Cavalli,1998-03-18,NA,NA,Valcar - Travel & Service,NA,NA,212,115,58,400,78
+Mavi García,1984-01-02,Spain,Marratxi,Alé BTC Ljubljana,56,1.72,357,439,95,620,1223
+Mikayla Harvey,1998-09-07,NA,NA,Équipe Paule Ka,NA,1.71,48,70,154,153,87
+Niamh Fisher-Black,2000-08-12,NA,NA,Équipe Paule Ka,NA,1.6,82,6,0,124,44
+Olha Kulynych,2000-01-01,NA,NA,Ciclotel,NA,NA,90,0,2,132,17
+Pauliena Rooijakkers,1993-05-12,Netherlands,Venray,CCC - Liv,58,1.71,118,99,178,204,434
+Pauline Allin,1995-05-02,France,Saintes,Team Arkéa,58,1.68,0,0,0,5,2
+Peta Mullens,1988-03-08,NA,NA,Roxsolt Attaquer,NA,NA,94,48,114,695,327
+Polina Kirillova,1997-10-08,NA,NA,Sestroretsk,NA,NA,73,22,89,223,32
+Rachel Neylan,1982-03-09,Australia,Sydney,Cronos Casa Dorada Women Cycling,52,1.69,425,199,761,537,738
+Rasa Leleivytė,1988-07-22,NA,Vilnius,Aromitalia Vaiano,NA,NA,1068,137,232,2032,1460
+Roxane Fournier,1991-11-07,France,Soisy-sous-Montmorency,Chevalmeire Cycling Team,60,1.66,807,283,142,3062,534
+Ruth Winder,1993-07-09,United States,Keighley,Trek-Segafredo Women,59,1.63,186,562,820,1189,861
+Sabrina Stultiens,1993-07-08,Netherlands,Helmond,CCC - Liv,58,1.74,227,179,318,400,507
+Sandra Levenez,1979-07-05,NA,NA,Team Arkéa,NA,NA,30,20,11,54,5
+Sarah Roy,1986-02-27,Australia,Sydney,Mitchelton-Scott,66,1.76,528,144,523,1573,107
+Silvia Zanardi,2000-03-03,NA,NA,Bepink,NA,NA,19,0,0,70,0
+Simona Frapporti,1988-07-14,Italy,Gavardo,Bepink,63,1.77,111,74,111,1134,187
+Soraya Paladin,1993-05-04,Italy,Treviso,CCC - Liv,59,1.66,210,451,145,1309,1069
+Špela Kern,1990-02-24,NA,NA,Lviv Cycling Team women,NA,NA,62,5,14,78,106
+Stine Borgli,1990-07-04,NA,Sandnes,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,67,124,91,376,289
+Susanne Andersen,1998-07-23,Norway,Stavanger,Team Sunweb,55,1.64,288,22,158,894,66
+Tatiana Guderzo,1984-08-22,Italy,Marostica,Alé BTC Ljubljana,54,1.6,1393,750,1949,1694,3104
+Tereza Medveďová,1996-03-27,NA,Brezno,WCC Team,NA,NA,44,8,142,4,39
+Urša Pintar,1985-10-03,Slovenia,Ljubljana,Alé BTC Ljubljana,56,1.69,175,27,94,240,405
+Valeriya Kononenko,1990-05-14,Ukraine,Donetsk,Ciclotel,68,1.75,217,69,98,447,2
+Victorie Guilman,1996-03-25,NA,Angoulême,FDJ Nouvelle Aquitaine Futuroscope,NA,NA,28,20,0,133,157
+Vita Heine,1984-11-21,NA,Riga,Hitec Products,NA,1.76,188,184,444,541,326
+Vittoria Bussi,1987-03-19,NA,Rome,NA,NA,NA,0,0,171,12,2
