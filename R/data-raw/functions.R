@@ -151,7 +151,7 @@ parse_rider_profile <- function(rider_html)
 
   if (str_detect(jumbled, "Date of birth:")){
     dob <- jumbled %>%
-      str_extract("(?<=:).*(?=\\()") %>%
+      gsub('^Date of birth: (\\w+ \\w+ \\w+) .+$', '\\1', .) %>%
       str_remove("th|nd|rd|st") %>%
       str_squish() %>%
       parse_date(., format = "%d %B %Y")
