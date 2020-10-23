@@ -11,17 +11,14 @@ devtools::install_github("seanhardison1/pcs")
 
 ### Usage
 
-#### Race results
-```
-pcs::rider_records_women
-pcs::rider_records_men
-```
-
 #### Biographical information
-```
-pcs::rider_profiles_women
-pcs::rider_profiles_men
-```
+- `pcs::rider_profiles_men`
+- `pcs::rider_profiles_women`
+
+#### Race results
+- `pcs::rider_records_men`
+- `pcs::rider_records_women`
+
 Rider results are returned as a `tibble` with the column `result` indicating finishing place. When a rider is listed as DNF, DNS, or DSQ etc, their 
 results are encoded numerically as follows:
 
