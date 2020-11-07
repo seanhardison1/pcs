@@ -309,15 +309,17 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
 
       output <- bind_rows(one_day_init,
                           gt_init) %>%
-        mutate(Date = ifelse(Date != "",paste0(Date,".",year),NA),
-               Date = parse_date(Date, format = "%d.%m.%Y"),
+        mutate(Date = ifelse(Date != "", paste0(Date,".",year), "NA"),
+               Date = parse_datetime(Date, format = "%d.%m.%Y"),
                rider = rider,
                team = team)
+  
+      # print(output)
     } else {
       output <-
         rider_season_table %>%
-        mutate(Date = ifelse(Date != "",paste0(Date,".",year),NA),
-               Date = parse_date(Date, format = "%d.%m.%Y"),
+        mutate(Date = ifelse(Date != "", paste0(Date,".",year), "NA"),
+               Date = parse_datetime(Date, format = "%d.%m.%Y"),
                stage = "One day",
                rider  = rider,
                team = team)
@@ -397,7 +399,11 @@ consolidate_profiles <- function(existing, actual)
   
   # are we good?
   test <- find_duplicate_profiles(out)
-  stopifnot(nrow(test) == 0)
+  
+  if (nrow(test) > 0){
+    message(paste(nrow(test), "entries with duplicates. This error may be due to duplicates on the PCS website. Double check entries below."))
+    print(test)
+  } 
   return(out)
 }
 
@@ -422,12 +428,17 @@ consolidate_results <- function(existing, actual)
   # remove every duplicate record from existing df using dups' columns
   # as rider/date/race/stage key
   tp1 <- anti_join(existing, dups, by = c("rider", "date", "race", "stage"))
+  
   # join with latest data
   out <- full_join(tp1, actual)
   
   # are we good?
   test <- find_duplicate_results(out)
-  stopifnot(nrow(test) == 0)
+  
+  if (nrow(test) > 0){
+    message(paste(nrow(test), "entries with duplicates. This error may be due to duplicates on the PCS website. Double check entries below."))
+    print(test)
+  } 
   return(out)
 }
 
@@ -462,3 +473,4 @@ get_pcs_data <- function(rider_urls, seasons = NULL)
   return(list("profiles" = rider_profiles,
               "results" = rider_results))
 }
+
