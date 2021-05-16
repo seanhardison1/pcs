@@ -1,5 +1,5 @@
 Package: pcs
-Title: A package for accessing rider data from ProCyclingStats.com
+Title: A package for querying rider data from ProCyclingStats.com
 Version: 0.0.0.9000
 Authors@R: 
  c(
@@ -27,5 +27,6 @@ Imports:
     tidyr,
     usethis,
     readr,
-    here
+    here,
+    stringi
 RoxygenNote: 7.1.1
