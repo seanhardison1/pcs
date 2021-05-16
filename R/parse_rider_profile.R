@@ -80,7 +80,7 @@ parse_rider_profile <- function(rider_html)
   climber <- jumbled %>%
     stringr::str_extract("(?<=Sprint\\n).*(?=Climber)")
   
-  out <- tibble(rider = rider,
+  out <- tibble::tibble(rider = rider,
                 dob = dob,
                 nationality = nationality,
                 pob = pob,

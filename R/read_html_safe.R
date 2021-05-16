@@ -17,7 +17,7 @@ read_html_safe <- function(url, tries = 3)
   {
     tryCatch(
       {
-        res_html <- read_html(url)
+        res_html <- rvest::read_html(url)
         break()
       },
       error = function(e)
