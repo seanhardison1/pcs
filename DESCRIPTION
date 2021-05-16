@@ -13,6 +13,8 @@ Authors@R:
 Maintainer: Sean Hardison <seanhardison@gmail.com>
 Description: pcs scrapes and aggregates rider data from procyclingstats.com.
 License: CC0
+URL: https://seanhardison1.github.io/pcs/, https://github.com/seanhardison1/pcs
+BugReports: https://github.com/seanhardison1/pcs/issues
 Encoding: UTF-8
 LazyData: true
 Depends: 
