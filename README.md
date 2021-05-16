@@ -1,7 +1,7 @@
 # pcs
-## A data package for analyzing aggregated rider data from [procyclingstats.com](https://procyclingstats.com)
+## A data package for querying rider data from [procyclingstats.com](https://procyclingstats.com)
 
-`pcs` contains the complete race results from both men and women riders ranked within the top 200 in the PCS Individual Rankings (since 08/29/2020). New rider data will be added as rankings change from week to week.
+The goal of `pcs` is to provide programmatic methods for querying professional cyclist results and biographical information from [procyclingstats.com](https://procyclingstats.com).
 
 ### Installation
 
@@ -11,16 +11,15 @@ devtools::install_github("seanhardison1/pcs")
 
 ### Usage
 
-#### Biographical information
-- `pcs::rider_profiles_men`
-- `pcs::rider_profiles_women`
+The main function in `pcs` is `query_pcs`, which scrapes rider results and biographical information from the PCS website. Usage is as follows:
 
-#### Race results
-- `pcs::rider_records_men`
-- `pcs::rider_records_women`
+```
+pcs::query_pcs("Peter Sagan", seasons = c(2020, 2021))
+```
 
-Rider results are returned as a `tibble` with the column `result` indicating finishing place. When a rider is listed as DNF, DNS, or DSQ etc, their 
-results are encoded numerically as follows:
+If no season years are specified, then `query_pcs` will pull all available data for the rider name(s) passed into the function as a character vector.
+
+Rider results are returned as a list of two data frames: `profiles`, containing biographical information, and `results`, containing race results. The `results` data frame may contain numeric entries that pertain to DNF, DNS, DSQ, etc, and are defined as follows:
 
 | Result flag | Code |
 |-------------|------|
@@ -30,10 +29,5 @@ results are encoded numerically as follows:
 | DF          | 996  |
 | NQ          | 995  |
 | DSQ         | 994  |
-  
-### Convert from CSV to sqlite 
-In case you want to work with SQL instead of CSV, it can be converted. The only dependency is the sqlite3 CLI program itself and it needs to be on the $PATH for the script to work. These functions are not available in the built package, so you will need to clone the repository to use them.
 
-To do so: cd to the `scripts` dir and execute `csv_to_sqlite`, it should generate two .sqlite files  
-* `data/rider_records_men.sqlite`
-* `data/rider_records_women.sqlite`
+The `profiles` data frame contains columns for total UCI points in the categories of `one_day_races`, `gc`, `tt`, and `sprint`. Caution is warranted when analyzing rider biographical information from PCS. Never forget that these folks are more than just numbers!!
