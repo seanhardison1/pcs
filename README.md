@@ -1,7 +1,7 @@
 # pcs
 ## A data package for querying rider data from [procyclingstats.com](https://procyclingstats.com)
 
-The goal of `pcs` is to provide programmatic methods for querying professional cyclist results and biographical information from [procyclingstats.com](https://procyclingstats.com).
+The goal of `pcs` is to provide programmatic methods for querying professional cyclist race results and biographical information from [procyclingstats.com](https://procyclingstats.com).
 
 ### Installation
 
