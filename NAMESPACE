@@ -2,4 +2,5 @@
 
 export("%>%")
 export(query_pcs)
+export(query_team)
 importFrom(magrittr,"%>%")

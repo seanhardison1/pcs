@@ -3,11 +3,9 @@
 #' \code{query_pcs} scrapes PCS data (rider profiles and results)
 #' for a given vector of rider names. 
 #' 
-#' @param rider_urls Character vector containing one or more rider names.
+#' @param rider_names Character vector containing one or more rider names.
 #' @param seasons Integer vector of years ("seasons") to collect results from. Will return all years if \code{NULL}.
 #' @return List of two data frames (\code{profiles} and \code{results}).
-#'   See \code{rider_profiles_men} and \code{rider_records_men} documentation
-#'   for details.
 #'   
 #' @export query_pcs
 #' 
@@ -23,7 +21,7 @@
 #' query_pcs(c("Peter Sagan","Adam Yates"))
 query_pcs <- function(rider_names, seasons = NULL)
 {
-  rider_urls <- name_fixer(rider_names)
+  rider_urls <- pcs:::name_fixer(rider_names)
   rider_profiles <- NULL
   rider_results <- NULL
   for (i in 1:length(rider_urls))
@@ -40,18 +38,5 @@ query_pcs <- function(rider_names, seasons = NULL)
   }
   return(list("profiles" = rider_profiles,
               "results" = rider_results))
-}
-
-name_fixer <- function(x){
-  stringr::str_replace_all(
-    stringr::str_trim(
-      stringr::str_to_lower(
-        stringi::stri_trans_general(
-          x,
-          id = "Latin-ASCII"
-        )
-      )
-    ), " ", "-"
-  )
 }
 

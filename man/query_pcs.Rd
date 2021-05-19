@@ -7,14 +7,12 @@
 query_pcs(rider_names, seasons = NULL)
 }
 \arguments{
-\item{seasons}{Integer vector of years ("seasons") to collect results from. Will return all years if \code{NULL}.}
+\item{rider_names}{Character vector containing one or more rider names.}
 
-\item{rider_urls}{Character vector containing one or more rider names.}
+\item{seasons}{Integer vector of years ("seasons") to collect results from. Will return all years if \code{NULL}.}
 }
 \value{
 List of two data frames (\code{profiles} and \code{results}).
-  See \code{rider_profiles_men} and \code{rider_records_men} documentation
-  for details.
 }
 \description{
 \code{query_pcs} scrapes PCS data (rider profiles and results)
