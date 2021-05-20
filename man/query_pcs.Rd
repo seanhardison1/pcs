@@ -13,6 +13,38 @@ query_pcs(rider_names, seasons = NULL)
 }
 \value{
 List of two data frames (\code{profiles} and \code{results}).
+
+The \code{results} data frame contains the following:
+
+\itemize{
+    \item date: Date of race.
+    \item result: Race result.
+    \item gc_result_on_stage: If a race was a stage race, gives the rider's placement overall following the stage.
+    \item race: Race name.
+    \item distance: Race distance (km).
+    \item pointspcs: PCS points awarded.
+    \item pointsuci: UCI points awarded.
+    \item stage: Type of race (one day, stage race, etc).
+    \item rider: Rider name.
+    \item team: Team name.
+}
+
+The \code{profiles} data frame contains the following:
+
+\itemize{
+    \item rider: Rider name.
+    \item dob: Date of birth.
+    \item Nationality
+    \item pob: Place of birth.
+    \item current_team: Current team.
+    \item weight: Weight in kg.
+    \item height: Height in m.
+    \item one_day_races: Career points awarded for success in one day races.
+    \item gc: Career points awarded for success in grand tours.
+    \item tt: Career points awarded for success in time trials.
+    \item sprint: Career points awarded for success in sprint-focused races.
+    \item climber: Career points awarded for success in climbing-focused races.
+}
 }
 \description{
 \code{query_pcs} scrapes PCS data (rider profiles and results)

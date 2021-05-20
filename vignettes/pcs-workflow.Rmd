@@ -1,0 +1,78 @@
+---
+title: "A worked example with `pcs`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### Peter Sagan by the numbers
+
+```{r, echo = F, message = F}
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(pcs)
+library(lubridate)
+
+process <- F
+# If you want to do a fresh download of Peter Sagan's record
+
+if (process){
+  # Extract race results and bio
+  sagan <- query_pcs("Peter Sagan")
+  sagan_results <- sagan$results
+  sagan_bio <- sagan$profiles
+  
+} else {
+  # Otherwise Sagan's results are saved as an example data set in the package (through 5/20/2021)
+  sagan_results <- pcs::sagan$results
+  sagan_bio <- pcs::sagan$profiles
+}
+```
+
+#### How many professional races has Peter Sagan raced? How many has he won?
+
+```{r}
+results_finished <- sagan_results %>% 
+  
+  # Final placement in grand tour points classifications is included in 
+  # the results data, so we filter them out first. We can also filter out
+  # the races that Sagan entered but did not finish
+  filter(!str_detect(stage, "classification"),
+         result < 200)
+
+# Completed races
+(races_finished <- nrow(results_finished))
+
+# Appearances in the top 10
+(top_10 <- results_finished %>% filter(result <= 10) %>% nrow())
+
+# Professional wins
+(wins <- results_finished %>% filter(result == 1) %>% nrow())
+```
+
+Since 2007, Peter Sagan has finished `r races_finished` races in total. Among those `r races_finished` races, he has placed in the top ten `r top_10` times, and has an incredible `r wins` wins to his name, giving him a historical winning percentage of `r round(wins/races_finished, 1)*100`%.
+
+#### Visualizing Peter Sagan's career
+
+There's little doubt that Peter Sagan is among the most winningest cyclists in history. Here's a visualization exploring Sagan's career arc; showing the frequency of races that he's finished in the top five by year. It's worth noting that at the time of writing, Sagan is still winning grand tour stages and the 2021 season is far from over.
+
+```{r, message=F, warning=F}
+results_finished %>% 
+  dplyr::filter(result <= 5) %>% 
+  group_by(year = year(date), result) %>%
+  summarise(n = n()) %>%
+  mutate(result = factor(result, levels = c(1:5))) %>% 
+    ggplot() +
+      geom_bar(aes(x = year, 
+                   fill = result, y = n), 
+               stat = "identity", position = "dodge") +
+  theme_minimal() +
+  labs(y = "Number of finishes",
+       fill = "Result") +
+  theme(axis.title.x = element_blank())
+```
+
