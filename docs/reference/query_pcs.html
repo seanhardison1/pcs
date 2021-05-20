@@ -149,6 +149,36 @@ for a given vector of rider names.</p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>List of two data frames (<code>profiles</code> and <code>results</code>).</p>
+<p>The <code>results</code> data frame contains the following:</p>
+<ul>
+<li><p>date: Date of race.</p></li>
+<li><p>result: Race result.</p></li>
+<li><p>gc_result_on_stage: If a race was a stage race, gives the rider's placement overall following the stage.</p></li>
+<li><p>race: Race name.</p></li>
+<li><p>distance: Race distance (km).</p></li>
+<li><p>pointspcs: PCS points awarded.</p></li>
+<li><p>pointsuci: UCI points awarded.</p></li>
+<li><p>stage: Type of race (one day, stage race, etc).</p></li>
+<li><p>rider: Rider name.</p></li>
+<li><p>team: Team name.</p></li>
+</ul>
+
+<p>The <code>profiles</code> data frame contains the following:</p>
+<ul>
+<li><p>rider: Rider name.</p></li>
+<li><p>dob: Date of birth.</p></li>
+<li><p>Nationality</p></li>
+<li><p>pob: Place of birth.</p></li>
+<li><p>current_team: Current team.</p></li>
+<li><p>weight: Weight in kg.</p></li>
+<li><p>height: Height in m.</p></li>
+<li><p>one_day_races: Career points awarded for success in one day races.</p></li>
+<li><p>gc: Career points awarded for success in grand tours.</p></li>
+<li><p>tt: Career points awarded for success in time trials.</p></li>
+<li><p>sprint: Career points awarded for success in sprint-focused races.</p></li>
+<li><p>climber: Career points awarded for success in climbing-focused races.</p></li>
+</ul>
+
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>

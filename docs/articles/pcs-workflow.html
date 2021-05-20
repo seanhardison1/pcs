@@ -93,28 +93,49 @@
 <div id="peter-sagan-by-the-numbers" class="section level3">
 <h3 class="hasAnchor">
 <a href="#peter-sagan-by-the-numbers" class="anchor"></a>Peter Sagan by the numbers</h3>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://stringr.tidyverse.org">stringr</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://seanhardison1.github.io/pcs/">pcs</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org">lubridate</a></span><span class="op">)</span>
+
+<span class="va">process</span> <span class="op">&lt;-</span> <span class="cn">F</span>
+<span class="co"># If you want to do a fresh download of Peter Sagan's record</span>
+
+<span class="kw">if</span> <span class="op">(</span><span class="va">process</span><span class="op">)</span><span class="op">{</span>
+  <span class="co"># Extract race results and bio</span>
+  <span class="va">sagan</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/query_pcs.html">query_pcs</a></span><span class="op">(</span><span class="st">"Peter Sagan"</span><span class="op">)</span>
+  <span class="va">sagan_results</span> <span class="op">&lt;-</span> <span class="va">sagan</span><span class="op">$</span><span class="va">results</span>
+  <span class="va">sagan_bio</span> <span class="op">&lt;-</span> <span class="va">sagan</span><span class="op">$</span><span class="va">profiles</span>
+  
+<span class="op">}</span> <span class="kw">else</span> <span class="op">{</span>
+  <span class="co"># Otherwise Sagan's results are saved as an example data set in the package (through 5/20/2021)</span>
+  <span class="va">sagan_results</span> <span class="op">&lt;-</span> <span class="fu">pcs</span><span class="fu">::</span><span class="va"><a href="../reference/sagan.html">sagan</a></span><span class="op">$</span><span class="va">results</span>
+  <span class="va">sagan_bio</span> <span class="op">&lt;-</span> <span class="fu">pcs</span><span class="fu">::</span><span class="va"><a href="../reference/sagan.html">sagan</a></span><span class="op">$</span><span class="va">profiles</span>
+<span class="op">}</span></code></pre></div>
 <div id="how-many-professional-races-has-peter-sagan-raced-how-many-has-he-won" class="section level4">
 <h4 class="hasAnchor">
 <a href="#how-many-professional-races-has-peter-sagan-raced-how-many-has-he-won" class="anchor"></a>How many professional races has Peter Sagan raced? How many has he won?</h4>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">results_finished</span> <span class="op">&lt;-</span> <span class="va">sagan_results</span> <span class="op">%&gt;%</span> 
   
   <span class="co"># Final placement in grand tour points classifications is included in </span>
   <span class="co"># the results data, so we filter them out first. We can also filter out</span>
   <span class="co"># the races that Sagan entered but did not finish</span>
-  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu">str_detect</span><span class="op">(</span><span class="va">stage</span>, <span class="st">"classification"</span><span class="op">)</span>,
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect</a></span><span class="op">(</span><span class="va">stage</span>, <span class="st">"classification"</span><span class="op">)</span>,
          <span class="va">result</span> <span class="op">&lt;</span> <span class="fl">200</span><span class="op">)</span>
 
 <span class="co"># Completed races</span>
 <span class="op">(</span><span class="va">races_finished</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">results_finished</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 890</code></pre>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Appearances in the top 10</span>
-<span class="op">(</span><span class="va">top_10</span> <span class="op">&lt;-</span> <span class="va">results_finished</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">result</span> <span class="op">&lt;=</span> <span class="fl">10</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<span class="op">(</span><span class="va">top_10</span> <span class="op">&lt;-</span> <span class="va">results_finished</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">result</span> <span class="op">&lt;=</span> <span class="fl">10</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 483</code></pre>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Professional wins</span>
-<span class="op">(</span><span class="va">wins</span> <span class="op">&lt;-</span> <span class="va">results_finished</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">result</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<span class="op">(</span><span class="va">wins</span> <span class="op">&lt;-</span> <span class="va">results_finished</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">result</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <pre><code>## [1] 123</code></pre>
 <p>Since 2007, Peter Sagan has finished 890 races in total. Among those 890 races, he has placed in the top ten 483 times, and has an incredible 123 wins to his name, giving him a historical winning percentage of 10%.</p>
 </div>
@@ -122,20 +143,20 @@
 <h4 class="hasAnchor">
 <a href="#visualizing-peter-sagans-career" class="anchor"></a>Visualizing Peter Sagan’s career</h4>
 <p>There’s little doubt that Peter Sagan is among the most winningest cyclists in history. Here’s a visualization exploring Sagan’s career arc; showing the frequency of races that he’s finished in the top five by year. It’s worth noting that at the time of writing, Sagan is still winning grand tour stages and the 2021 season is far from over.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">results_finished</span> <span class="op">%&gt;%</span> 
   <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">result</span> <span class="op">&lt;=</span> <span class="fl">5</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu">group_by</span><span class="op">(</span>year <span class="op">=</span> <span class="fu">year</span><span class="op">(</span><span class="va">date</span><span class="op">)</span>, <span class="va">result</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">summarise</span><span class="op">(</span>n <span class="op">=</span> <span class="fu">n</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">mutate</span><span class="op">(</span>result <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">result</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-    <span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-      <span class="fu">geom_bar</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, 
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fu"><a href="http://lubridate.tidyverse.org/reference/year.html">year</a></span><span class="op">(</span><span class="va">date</span><span class="op">)</span>, <span class="va">result</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>result <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">result</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+      <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, 
                    fill <span class="op">=</span> <span class="va">result</span>, y <span class="op">=</span> <span class="va">n</span><span class="op">)</span>, 
                stat <span class="op">=</span> <span class="st">"identity"</span>, position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">labs</span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Number of finishes"</span>,
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Number of finishes"</span>,
        fill <span class="op">=</span> <span class="st">"Result"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu">theme</span><span class="op">(</span>axis.title.x <span class="op">=</span> <span class="fu">element_blank</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.title.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="pcs-workflow_files/figure-html/unnamed-chunk-3-1.png" width="700"></p>
 </div>
 </div>

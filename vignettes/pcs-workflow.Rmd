@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Peter Sagan by the numbers
 
-```{r, echo = F, message = F}
+```{r, message = F}
 library(dplyr)
 library(stringr)
 library(ggplot2)
