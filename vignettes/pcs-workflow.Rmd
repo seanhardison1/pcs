@@ -36,7 +36,7 @@ if (process){
 #### How many professional races has Peter Sagan raced? How many has he won?
 
 ```{r}
-results_finished <- sagan_results %>% 
+results_finished <- sagan_results %>%  
   
   # Final placement in grand tour points classifications is included in 
   # the results data, so we filter them out first. We can also filter out
@@ -54,7 +54,7 @@ results_finished <- sagan_results %>%
 (wins <- results_finished %>% filter(result == 1) %>% nrow())
 ```
 
-Since 2007, Peter Sagan has finished `r races_finished` races in total. Among those `r races_finished` races, he has placed in the top ten `r top_10` times, and has an incredible `r wins` wins to his name, giving him a historical winning percentage of `r round(wins/races_finished, 1)*100`%.
+Since 2007, Peter Sagan has finished `r races_finished` races in total. Among those `r races_finished` races, he has placed in the top ten `r top_10` times, and has an incredible `r wins` wins to his name, giving him a historical winning percentage of `r round(wins/races_finished, 3)*100`%.
 
 #### Visualizing Peter Sagan's career
 
