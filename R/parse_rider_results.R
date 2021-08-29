@@ -66,12 +66,10 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
       dplyr::select(-e1,-e2)
     
     gt <- rider_season_table %>%
-      dplyr::filter(dplyr::case_when(stringr::str_detect(Date, "›") ~ T,
-                       Date == "" ~ T,
-                       stringr::str_detect(Race, "Stage") ~ T))
+      dplyr::filter(is.na(Distance) | stringr::str_detect(Race, "Stage"))
     
     if (nrow(gt) != 0){
-      group_indices1 <- which(stringr::str_detect(gt$Date, "›"))
+      group_indices1 <- which(is.na(gt$Result) | gt$Result == "")
       group_indices2 <- c(diff(group_indices1)[1],
                           diff(group_indices1)[-1],
                           (nrow(gt) - group_indices1[length(group_indices1)] + 1))

@@ -64,7 +64,7 @@ query_pcs <- function(rider_names, seasons = NULL)
     message(profile_out["rider"])
     assign('rider_profiles', rbind(profile_out, rider_profiles))
     
-    results_out <- pcs:::parse_rider_results(rider_url, rider_html, seasons)
+    results_out <- pcs:::parse_rider_results(rider_id = rider_url, rider_html, seasons)
     assign('rider_results', rbind(results_out, rider_results))
   }
   return(list("profiles" = rider_profiles,

@@ -58,7 +58,7 @@ Since 2007, Peter Sagan has finished `r races_finished` races in total. Among th
 
 #### Visualizing Peter Sagan's career
 
-There's little doubt that Peter Sagan is among the most winningest cyclists in history. Here's a visualization exploring Sagan's career arc; showing the frequency of races that he's finished in the top five by year. It's worth noting that at the time of writing, Sagan is still winning grand tour stages and the 2021 season is far from over.
+There's little doubt that Peter Sagan is among the most winningest cyclists in history. Here's a visualization exploring Sagan's career arc; showing the frequency of races that he's finished in the top five by year.
 
 ```{r, message=F, warning=F}
 results_finished %>% 

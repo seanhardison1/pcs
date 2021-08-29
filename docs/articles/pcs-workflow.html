@@ -76,7 +76,7 @@
 
       
 
-      </header><script src="pcs-workflow_files/header-attrs-2.7/header-attrs.js"></script><div class="row">
+      </header><script src="pcs-workflow_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>A worked example with <code>pcs</code>
@@ -118,7 +118,7 @@
 <h4 class="hasAnchor">
 <a href="#how-many-professional-races-has-peter-sagan-raced-how-many-has-he-won" class="anchor"></a>How many professional races has Peter Sagan raced? How many has he won?</h4>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">results_finished</span> <span class="op">&lt;-</span> <span class="va">sagan_results</span> <span class="op">%&gt;%</span> 
+<code class="sourceCode R"><span class="va">results_finished</span> <span class="op">&lt;-</span> <span class="va">sagan_results</span> <span class="op">%&gt;%</span>  
   
   <span class="co"># Final placement in grand tour points classifications is included in </span>
   <span class="co"># the results data, so we filter them out first. We can also filter out</span>
@@ -142,7 +142,7 @@
 <div id="visualizing-peter-sagans-career" class="section level4">
 <h4 class="hasAnchor">
 <a href="#visualizing-peter-sagans-career" class="anchor"></a>Visualizing Peter Sagan’s career</h4>
-<p>There’s little doubt that Peter Sagan is among the most winningest cyclists in history. Here’s a visualization exploring Sagan’s career arc; showing the frequency of races that he’s finished in the top five by year. It’s worth noting that at the time of writing, Sagan is still winning grand tour stages and the 2021 season is far from over.</p>
+<p>There’s little doubt that Peter Sagan is among the most winningest cyclists in history. Here’s a visualization exploring Sagan’s career arc; showing the frequency of races that he’s finished in the top five by year.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">results_finished</span> <span class="op">%&gt;%</span> 
   <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">result</span> <span class="op">&lt;=</span> <span class="fl">5</span><span class="op">)</span> <span class="op">%&gt;%</span> 
