@@ -27,7 +27,7 @@ if (process){
   sagan_bio <- sagan$profiles
   
 } else {
-  # Otherwise Sagan's results are saved as an example data set in the package (through 5/20/2021)
+  # Otherwise Sagan's results are saved as an example data set in the package (through 12/30/2021)
   sagan_results <- pcs::sagan$results
   sagan_bio <- pcs::sagan$profiles
 }
