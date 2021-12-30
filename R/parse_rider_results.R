@@ -3,7 +3,7 @@
 #' \code{parse_rider_results} parses HTML code of rider's profile page
 #' for race results.
 #'
-#' @param rider_id Rider's profile ID
+#' @param rider_id Rider's profile URL
 #' @param rider_html HTML code of rider's profile page
 #' @param seasons (optional) Vector of covered seasons (as integers), all if \code{NULL} (default)
 #' @return Rider results (see \code{rider_records_men} documentation)
@@ -41,8 +41,10 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
       rvest::html_nodes(".seasonResults") %>%
       rvest::html_text() %>%
       unique()
+    
+    
   } 
-  
+  seasonResults <- seasonResults[!stringr::str_detect(seasonResults, "/")]
   stopifnot(length(seasonResults) != 0)
   
   for (j in 1:length(seasonResults))
@@ -58,15 +60,18 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
     rider_season_url <- paste0(rider_id, "/", year)
     rider_season_site <- pcs:::read_html_safe(rider_season_url)
     rider_season_table <- rider_season_site %>%
-      rvest::html_table() %>%
-      .[[1]] %>% 
+      rvest::html_table() %>% 
+      .[[1]] %>%
+       as.data.frame() %>% 
       dplyr::rename(gc_result_on_stage = 3,
                     e1 = 4,
                     e2 = 9) %>%
       dplyr::select(-e1,-e2)
     
+    
     gt <- rider_season_table %>%
-      dplyr::filter(is.na(Distance) | stringr::str_detect(Race, "Stage"))
+      dplyr::filter(is.na(Distance) | stringr::str_detect(Race, "Stage")) %>% 
+      dplyr::filter(!stringr::str_detect(Race, "1\\.1"))
     
     if (nrow(gt) != 0){
       group_indices1 <- which(is.na(gt$Result) | gt$Result == "")
@@ -85,19 +90,35 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
                Race = dplyr::first(Race)) %>%
         dplyr::slice(-1) %>%
         dplyr::ungroup() %>%
-        dplyr::select(-id)
+        dplyr::select(-id) 
       
       one_day_init <-
         rider_season_table %>%
         dplyr::filter(!Race %in% unique(gt_anti_join$Race)) %>%
         dplyr::mutate(stage = "One day")
       
-      output <- dplyr::bind_rows(one_day_init,
-                          gt_init) %>%
+      output1 <- dplyr::bind_rows(one_day_init,
+                          gt_init) %>% 
+        dplyr::mutate(Date = stringr::str_replace(Date, "\\.1", "\\.10")) %>% 
         dplyr::mutate(Date = ifelse(Date != "", paste0(Date,".",year), "NA"),
                Date = readr::parse_datetime(Date, format = "%d.%m.%Y"),
                rider = rider,
                team = team)
+      
+      no_dates <- output1 %>% 
+        dplyr::filter(is.na(Date)) %>% 
+        dplyr::select(Race, stage)
+      
+      output <- 
+        output1 %>% 
+        dplyr::group_by(Race) %>% 
+        dplyr::slice(which.min(Date)) %>% 
+        dplyr::select(Date2 = Date, Race) %>% 
+        dplyr::inner_join(no_dates, by = "Race") %>% 
+        dplyr::ungroup() %>% 
+        dplyr::right_join(.,output1, by = c("Race", "stage")) %>% 
+        dplyr::mutate(Date = dplyr::coalesce(Date, Date2)) %>% 
+        dplyr::select(-Date2)
       
       # print(output)
     } else {
@@ -109,6 +130,7 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
                rider  = rider,
                team = team)
     }
+    
     assign('rider_season_output', rbind(rider_season_output, output))
   }
   

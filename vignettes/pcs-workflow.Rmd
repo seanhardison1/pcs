@@ -42,7 +42,7 @@ results_finished <- sagan_results %>%
   # the results data, so we filter them out first. We can also filter out
   # the races that Sagan entered but did not finish
   filter(!str_detect(stage, "classification"),
-         result < 200)
+         result < 200) 
 
 # Completed races
 (races_finished <- nrow(results_finished))
