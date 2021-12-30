@@ -61,7 +61,13 @@ query_pcs <- function(rider_names, seasons = NULL)
     rider_html <- pcs:::read_html_safe(rider_url)
     
     profile_out <- pcs:::parse_rider_profile(rider_html)
-    message(profile_out["rider"])
+    
+    if (nrow(profile_out) == 0) {
+      profile_out <- profile_out %>% 
+        dplyr::add_row(rider = rider_urls[i])
+      message(paste("Profile for ",rider_urls[i]," failed to parse."))
+      }
+    
     assign('rider_profiles', rbind(profile_out, rider_profiles))
     
     results_out <- pcs:::parse_rider_results(rider_id = rider_url, rider_html, seasons)

@@ -25,6 +25,8 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
     rvest::html_nodes(xpath = "/html/body/div[1]/div[1]/div[2]/div[1]/span[4]") %>% 
     rvest::html_text()
   
+  if (length(team) == 0) team <- "Parsing failure"
+  
   # Extract number of seasons raced by rider
   seasonResults <- 
     rider_html %>% 
@@ -99,7 +101,7 @@ parse_rider_results <- function(rider_id, rider_html, seasons = NULL)
       
       output1 <- dplyr::bind_rows(one_day_init,
                           gt_init) %>% 
-        dplyr::mutate(Date = stringr::str_replace(Date, "\\.1", "\\.10")) %>% 
+        dplyr::mutate(Date = stringr::str_replace(Date, stringr::fixed("\\.1"), "\\.10")) %>% 
         dplyr::mutate(Date = ifelse(Date != "", paste0(Date,".",year), "NA"),
                Date = readr::parse_datetime(Date, format = "%d.%m.%Y"),
                rider = rider,

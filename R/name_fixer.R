@@ -11,6 +11,6 @@ name_fixer <- function(x){
           id = "Latin-ASCII"
         )
       )
-    ), " ", "-"
+    ), " |'", "-"
   )
 }
